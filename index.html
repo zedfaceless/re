@@ -27,6 +27,7 @@
             </ul> 
         </nav>
     </header>
+
     <main>
         <section class="card">
             <h2>Course Work</h2>
@@ -34,43 +35,39 @@
             <p>•    </p>
             <p>•    </p>
         </section>
-    
+        
         <section class="card">
             <h2>Bacolod Philippines</h2>
             <div class="image-container">
-            <img class="Place" src="images/Bacolod.webp" alt="City_of_Smile">
+                <img class="Place" src="images/Bacolod.webp" alt="City_of_Smile">
             </div>
         </section>
-    
-        <!-- New H2 section at the end -->
+        
         <section class="full-width-card">
             <h2>Web and Computer Programming Certificate</h2>
-        
+            
             <div class="category-tabs">
                 <button class="category-button active" onclick="filterTabs('all')">ALL</button>
                 <button class="category-button" onclick="filterTabs('CSE')">CSE</button>
                 <button class="category-button" onclick="filterTabs('WDD')">WDD</button>
             </div>
-        
+            
             <div class="course-buttons">
                 <div class="button-column">
                     <button class="course-button" data-category="CSE" onclick="showCourseContent('CSE110')">CSE110</button>
+                    <button class="course-button" data-category="CSE" onclick="showCourseContent('CSE111')">CSE111</button>
                     <button class="course-button" data-category="CSE" onclick="showCourseContent('CSE210')">CSE210</button>
                 </div>
                 <div class="button-column">
-                    <button class="course-button" data-category="CSE" onclick="showCourseContent('CSE111')">CSE111</button>
                     <button class="course-button" data-category="WDD" onclick="showCourseContent('WDD130')">WDD130</button>
-                </div>
-                <div class="button-column">
                     <button class="course-button" data-category="WDD" onclick="showCourseContent('WDD131')">WDD131</button>
                     <button class="course-button" data-category="WDD" onclick="showCourseContent('WDD231')">WDD231</button>
                 </div>
             </div>
         </section>
-        
-
     </main>
     
+
     <footer>
         <p>&copy; <span id="currentyear"></span> Melchizedek Galvan Fernandez | Philippines</p>
         <img src="images/flag-ph.webp" alt="Philippines Flag" class="philippines-flag">
