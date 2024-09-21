@@ -99,9 +99,11 @@ function filterTabs(category) {
     event.target.classList.add('active');
 }
 
-// Run filterTabs('all') after the page loads to show all tabs
-document.addEventListener('DOMContentLoaded', function() {
-    filterTabs('all');
+const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('nav');
+
+navToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
 });
 
     </script>
