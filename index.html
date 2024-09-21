@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131: Dynamic Web Fundamentals - Melchizedek Fernandez</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Melchizedek Galvan Fernandez">
+    <meta name="author" content="Homepage">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/1x1.jpg" alt="Zed-Fernandez">
+            <h1>Melchizedek Fernandez</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">LinkedIn</a></li>
+                <li><a href="https://byui.instructure.com/">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/26?lang=eng&id=p27#p27">Scripture</a></li>
+                <li><a href="https://zedfaceless.github.io/wdd131/">Final Project</a></li>
+            </ul> 
+        </nav>
+    </header>
+    <main>
+        <section class="card">
+            <h2>Course Work</h2>
+            <p>•    </p>
+            <p>•    </p>
+            <p>•    </p>
+        </section>
+    
+        <section class="card">
+            <h2>Bacolod Philippines</h2>
+            <div class="image-container">
+            <img class="Place" src="images/Bacolod (1).webp" alt="City_of_Smile">
+            </div>
+        </section>
+    
+        <!-- New H2 section at the end -->
+        <section class="full-width-card">
+            <h2>Web and Computer Programming Certificate</h2>
+        
+            <div class="category-tabs">
+                <button class="category-button active" onclick="filterTabs('all')">ALL</button>
+                <button class="category-button" onclick="filterTabs('CSE')">CSE</button>
+                <button class="category-button" onclick="filterTabs('WDD')">WDD</button>
+            </div>
+        
+            <div class="course-buttons">
+                <div class="button-column">
+                    <button class="course-button" data-category="CSE" onclick="showCourseContent('CSE110')">CSE110</button>
+                    <button class="course-button" data-category="CSE" onclick="showCourseContent('CSE210')">CSE210</button>
+                </div>
+                <div class="button-column">
+                    <button class="course-button" data-category="CSE" onclick="showCourseContent('CSE111')">CSE111</button>
+                    <button class="course-button" data-category="WDD" onclick="showCourseContent('WDD130')">WDD130</button>
+                </div>
+                <div class="button-column">
+                    <button class="course-button" data-category="WDD" onclick="showCourseContent('WDD131')">WDD131</button>
+                    <button class="course-button" data-category="WDD" onclick="showCourseContent('WDD231')">WDD231</button>
+                </div>
+            </div>
+        </section>
+        
+
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> ☺ Melchizedek Galvan Fernandez | Philippines ☺ </p>
+        <img src="images/flag-ph.webp" alt="Philippines Flag" class="philippines-flag">
+        <p id="lastModified"></p>
+    </footer>
+    
+
+    <script>
+        // Filter Course Tabs by Category (ALL, CSE, WDD)
+function filterTabs(category) {
+    var allButtons = document.getElementsByClassName('course-button');
+
+    for (var i = 0; i < allButtons.length; i++) {
+        var buttonCategory = allButtons[i].getAttribute('data-category');
+        
+        // Show buttons based on the selected category
+        if (category === 'all' || buttonCategory.startsWith(category.toUpperCase())) {
+            allButtons[i].style.display = 'inline-block';
+        } else {
+            allButtons[i].style.display = 'none'; // Only hide if it's not in the selected category
+        }
+    }
+
+    var categoryButtons = document.getElementsByClassName('category-button');
+    for (var i = 0; i < categoryButtons.length; i++) {
+        categoryButtons[i].classList.remove('active');
+    }
+
+    event.target.classList.add('active');
+}
+
+// Run filterTabs('all') after the page loads to show all tabs
+document.addEventListener('DOMContentLoaded', function() {
+    filterTabs('all');
+});
+
+    </script>
+</body>
+</html>

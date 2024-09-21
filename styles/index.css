@@ -1,0 +1,334 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    max-width: 980px;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+
+}
+
+
+header {
+	background-color: #0d2c70d8;
+    color: #fff;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center; /* Centers text vertically */
+    justify-content: center; /* Centers content horizontally */
+    padding: 20px;
+    background-color: #0d2c70d8;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header-container img {
+    border-radius: 50%; /* Optional: Circular image */
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    margin-right: 20px; /* Space between image and text */
+}
+
+.header-container h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+}
+
+
+main {
+	margin: 0 auto;
+}
+
+h1 {
+    font-size: 1.5rem;
+	font-weight: 400;
+    text-align: center;
+    padding: 15px;
+    padding-bottom: 20px;
+}
+
+
+nav {
+	background-color: #000000;
+	margin: 0 auto;
+}
+nav ul {
+	list-style-type: none;
+}
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+}
+
+nav a:hover {
+	text-decoration:overline;
+    color: #f6f6ee;
+    padding: 15px;
+}
+
+.card, .full-width-card {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #d3d2d2; /* Border style */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+
+.full-width-card {
+    grid-column: 1 / -1; /* Make this section span across all columns */
+    background-color: #ffffffd8; /* Background color similar to other sections */
+    color: white; /* Text color */
+    padding: 20px; /* Padding for spacing */
+    text-align: center; /* Center-align the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    font-size: 1.5rem; /* Adjust the font size if needed */
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.category-button {
+    background-color: #000000d8;
+    color: white;
+    border:#000000;
+    padding: 10px 20px; 
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.category-button.active {
+    background-color: #7d8ba9;
+}
+
+.course-buttons {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out columns evenly */
+    margin: 20px 0; /* Add some margin around */
+}
+
+.button-column {
+    flex: 1; /* Each column takes up equal space */
+    margin: 0 10px; /* Space between columns */
+}
+
+.course-button {
+    display: block; /* Make buttons stack vertically */
+    width: 100%; /* Full width of the column */
+    padding: 10px; /* Padding for buttons */
+    margin: 5px 0; /* Space between buttons */
+    background-color: #658fba; /* Button background color */
+    color: rgb(0, 0, 0); /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+.course-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+.course-button.active {
+    background-color: #0056b3; /* Active button color */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    margin-top: 20px; /* Add margin to the top */
+}
+
+.Place {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.philippines-flag {
+    width: 30px;  /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures it appears on a new line */
+    margin: 10px auto 0; /* Center the flag and add margin at the top */
+}
+
+
+@media (min-width: 640px) {
+	nav ul {
+		display: flex;
+	}
+	nav ul li {
+		flex: 1 1 100%;
+	}
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2.6fr 1.4fr;
+    gap: 10px;
+    margin: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #d3d2d2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.card h2 {
+    text-align: center;
+}
+.card ul {
+    list-style: none;
+    padding: 5px;
+}
+.card ul li {
+    margin: 15px;
+}
+.card ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.card ul li a:hover {
+    color: #0056b3;
+    transform: scale(1.05); /* Scale effect on hover */
+}
+.card ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #007BFF;
+    transform: scaleX(0); /* Initially invisible */
+    transition: transform 0.3s ease;
+    transform-origin: bottom right;
+}
+.card ul li a:hover::before {
+    transform: scaleX(1); /* Expand underline on hover */
+    transform-origin: bottom left;
+}
+
+.course-tabs {
+    flex-direction: column;
+}
+
+.aright {
+    float: right;
+    width: 210px;
+    height: auto;
+    padding: 15px;
+}
+
+.aleft {
+    float: left;
+    width: 230px;
+    height: auto;
+    padding: 15px;
+    text-align: center;
+}
+
+.aleft img {
+    display: block;
+    margin: 0 auto;
+}
+
+.aleft figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+}
+
+.aleft + p {
+    margin-left: 230px;
+}
+
+.tabs {
+    flex-direction: column;
+}
+.tab-button {
+    margin-bottom: 5px;
+}
+
+
+
+section h2 {
+    font-size: 1.2rem;
+    background-color:#0d2c70d8;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+section h3 {
+    font-size: 1.2rem;
+    color: #111622;
+    text-align: center;
+    padding-top: 10px;
+}
+
+section hr {
+    border: none;
+    width:80%;
+    height: 1.3px;
+    background-color: #0d2c70d8;
+    margin: 10px 60px;
+    margin-top: 5px;
+}
+
+section p {
+    padding: 20px;
+    margin: 10px;
+    color: #061a46;
+}
+
+section ul {
+    margin-left: 40px;
+    margin-top: 60%;
+}
+
+
+section a {
+    color: #061a46;
+	padding: 1.2rem;
+	text-decoration: none;
+}
+
+
+
+footer {
+    background-color: #0d2c70d8;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
