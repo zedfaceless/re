@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chamber of Commerce Directory">
+  <meta name="author" content="Melchizedek Fernandez">
+  
+  <!-- Open Graph Meta Tags for Facebook -->
+  <meta property="og:title" content="Chamber of Commerce Directory">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://your-github-repo-url/images/chamber-og-image.jpg">
+  <meta property="og:url" content="https://your-website-url/chamber/directory.html">
+  
+  <title>Chamber of Commerce Directory</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style/normalize.css">
+  <link rel="stylesheet" href="style/directory.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Local Chamber of Commerce</h1>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="directory.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-icon" id="menu-icon">
+          &#9776;
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main>
+    <section id="directory" class="container">
+      <div class="view-toggle">
+        <button id="grid-view" class="active">Grid View</button>
+        <button id="list-view">List View</button>
+      </div>
+      <div id="members-container" class="grid-view">
+        <!-- Member cards will be injected here by JavaScript -->
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>Contact Information: <a href="mailto:zedfaces.fernandez@gmail.com">zedfaces.fernandez@gmail.com</a> | +63 961 568 9971</p>
+        <p>Developed by Melchizedek Fernandez for WDD 231</p>
+        <p>Last Updated: <span id="last-modified"></span></p>
+        <p>&copy; <span id="year"></span> Local Chamber of Commerce</p>
+        <img src="image/flag-ph.webp" alt="Philippines Flag" class="flag">
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="scripts/directory.js"></script>
+</body>
+</html>
