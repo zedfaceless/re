@@ -49,19 +49,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Toggle view functions
-  gridViewBtn.addEventListener('click', () => {
-    membersContainer.classList.remove('list-view');
-    membersContainer.classList.add('grid-view');
-    gridViewBtn.classList.add('active');
-    listViewBtn.classList.remove('active');
-  });
+gridViewBtn.addEventListener('click', () => {
+  membersContainer.classList.remove('list-view');
+  membersContainer.classList.add('grid-view');
+  gridViewBtn.classList.add('active');
+  listViewBtn.classList.remove('active');
+});
 
-  listViewBtn.addEventListener('click', () => {
-    membersContainer.classList.remove('grid-view');
-    membersContainer.classList.add('list-view');
-    listViewBtn.classList.add('active');
-    gridViewBtn.classList.remove('active');
-  });
+listViewBtn.addEventListener('click', () => {
+  membersContainer.classList.remove('grid-view');
+  membersContainer.classList.add('list-view');
+  listViewBtn.classList.add('active');
+  gridViewBtn.classList.remove('active');
+});
+
 
   // Toggle navigation menu on mobile
   menuIcon.addEventListener('click', () => {
