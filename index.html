@@ -7,7 +7,6 @@
     <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Melchizedek Galvan Fernandez">
     <meta name="author" content="Homepage">
     <link rel="stylesheet" href="styles/index.css">
-    <script src="scripts/getdates.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
@@ -18,22 +17,29 @@
             <img src="images/1x1.jpg" alt="Zed-Fernandez">
             <h1>Melchizedek Fernandez</h1>
         </div>
-        <nav>
+        <div class="off-screen-menu">
             <ul>
                 <li><a href="https://zedfaceless.github.io/wdd231/">Home</a></li>
                 <li><a href="https://byui.instructure.com/">Chamber</a></li>
                 <li><a href="https://github.com/zedfaceless">Github Profile</a></li>
-                <li><a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">LinkIn</a></li>
-            </ul> 
+                <li><a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">LinkedIn</a></li>
+            </ul>
+        </div>
+        <nav>
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
     <main>
         <section class="card">
             <h2>Course Work</h2>
-            <p>•    </p>
-            <p>•    </p>
-            <p>•    </p>
+            <p>•</p>
+            <p>•</p>
+            <p>•</p>
         </section>
         
         <section class="card">
@@ -45,67 +51,94 @@
         
         <section class="full-width-card">
             <h2>Web and Computer Programming Certificate</h2>
-            
             <div class="category-tabs">
-                <button class="category-button active" onclick="filterTabs('all')">ALL</button>
+                <button class="category-button" onclick="filterTabs('all')">ALL</button>
                 <button class="category-button" onclick="filterTabs('CSE')">CSE</button>
                 <button class="category-button" onclick="filterTabs('WDD')">WDD</button>
             </div>
-            
             <div class="course-buttons">
                 <div class="button-column">
-                    <button class="course-button" data-category="CSE" onclick="showCourseContent('CSE110')">CSE110</button>
-                    <button class="course-button" data-category="CSE" onclick="showCourseContent('CSE111')">CSE111</button>
-                    <button class="course-button" data-category="CSE" onclick="showCourseContent('CSE210')">CSE210</button>
+                    <button class="course-button" data-course="CSE 110" data-category="CSE">CSE 110</button>
+                    <button class="course-button" data-course="CSE 111" data-category="CSE">CSE 111</button>
                 </div>
                 <div class="button-column">
-                    <button class="course-button" data-category="WDD" onclick="showCourseContent('WDD130')">WDD130</button>
-                    <button class="course-button" data-category="WDD" onclick="showCourseContent('WDD131')">WDD131</button>
-                    <button class="course-button" data-category="WDD" onclick="showCourseContent('WDD231')">WDD231</button>
+                    <button class="course-button" data-course="CSE 210" data-category="CSE">CSE 210</button>
+                    <button class="course-button" data-course="WDD 130" data-category="WDD">WDD 130</button>
+                    <button class="course-button" data-course="WDD 131" data-category="WDD">WDD 131</button>
+                    <button class="course-button" data-course="WDD 231" data-category="WDD">WDD 231</button>
                 </div>
+            </div>
+            
+            <div id="course-details" class="course-details" style="display: none;">
+                <!-- Course details will be displayed here -->
             </div>
         </section>
     </main>
     
-
     <footer>
         <p>&copy; <span id="currentyear"></span> Melchizedek Galvan Fernandez | Philippines</p>
         <img src="images/flag-ph.webp" alt="Philippines Flag" class="philippines-flag">
         <p id="lastModified"></p>
     </footer>
-    
 
     <script>
         // Filter Course Tabs by Category (ALL, CSE, WDD)
-function filterTabs(category) {
-    var allButtons = document.getElementsByClassName('course-button');
-
-    for (var i = 0; i < allButtons.length; i++) {
-        var buttonCategory = allButtons[i].getAttribute('data-category');
-        
-        // Show buttons based on the selected category
-        if (category === 'all' || buttonCategory.startsWith(category.toUpperCase())) {
-            allButtons[i].style.display = 'inline-block';
-        } else {
-            allButtons[i].style.display = 'none'; // Only hide if it's not in the selected category
+        function filterTabs(category) {
+            const allButtons = document.getElementsByClassName('course-button');
+            for (let i = 0; i < allButtons.length; i++) {
+                const buttonCategory = allButtons[i].getAttribute('data-category');
+                // Show buttons based on the selected category
+                if (category === 'all' || buttonCategory.startsWith(category)) {
+                    allButtons[i].style.display = 'inline-block';
+                } else {
+                    allButtons[i].style.display = 'none'; // Only hide if it's not in the selected category
+                }
+            }
+            const categoryButtons = document.getElementsByClassName('category-button');
+            for (let i = 0; i < categoryButtons.length; i++) {
+                categoryButtons[i].classList.remove('active');
+            }
+            event.target.classList.add('active');
         }
-    }
 
-    var categoryButtons = document.getElementsByClassName('category-button');
-    for (var i = 0; i < categoryButtons.length; i++) {
-        categoryButtons[i].classList.remove('active');
-    }
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamMenu = document.querySelector('.ham-menu');
+            const offScreenMenu = document.querySelector('.off-screen-menu');
 
-    event.target.classList.add('active');
-}
+            hamMenu.addEventListener('click', () => {
+                hamMenu.classList.toggle('active');
+                offScreenMenu.classList.toggle('active');
+            });
 
-const navToggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('nav');
+            const courseButtons = document.querySelectorAll(".course-button");
+            const courseDetails = document.getElementById("course-details");
 
-navToggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-});
+            const coursesData = {
+                "CSE 110": "Programming Building Blocks - 2.00 A",
+                "CSE 111": "Programming with Functions - 2.00 A",
+                "CSE 210": "Programming with Classes - 2.00 B",
+                "WDD 130": "Web Fundamentals - 2.00 A",
+                "WDD 131": "Dynamic Web Fundamentals - 2.00 B",
+                "WDD 231": "Web Frontend Development I - 2.00 In progress"
+            };
 
+            courseButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const courseCode = button.getAttribute("data-course");
+                    const details = coursesData[courseCode];
+                    // Update and show the course details
+                    courseDetails.textContent = details;
+                    courseDetails.style.display = "block"; // Show details section
+                });
+            });
+
+            const currentYear = new Date().getFullYear();
+            document.getElementById("currentyear").textContent = currentYear;
+
+            // Set last modified date
+            const lastModified = document.lastModified;
+            document.getElementById("lastModified").textContent = `Last Modified: ${lastModified}`;
+        });
     </script>
 </body>
 </html>

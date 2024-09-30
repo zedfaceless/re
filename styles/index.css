@@ -15,220 +15,135 @@ header {
     background-color: #0d2c70d8;
     color: #fff;
     display: flex;
-    justify-content: space-between; /* Space between logo and text */
-    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
 }
 
 .header-container {
-    display: flex; /* Use flexbox for side-by-side layout */
-    align-items: center; /* Center items vertically */
+    display: flex;
+    align-items: center;
 }
 
 .header-container img {
-    border-radius: 50%; /* Optional: Circular image */
-    width: 100px; /* Adjust size as needed */
+    border-radius: 50%;
+    width: 100px;
     height: 100px;
-    margin-right: 20px; /* Space between image and text */
+    margin-right: 20px;
 }
 
 .header-container h1 {
     font-size: 1.8rem;
     font-weight: 400;
-    text-align: center; /* Center-align the text */
+    text-align: center;
 }
 
-.menu-toggle {
-    display: block; /* Show menu toggle */
-    cursor: pointer; /* Pointer on hover */
+.off-screen-menu {
+    background-color: #0056b3;
+    height: 50vh;
+    width: 50%;
+    max-width: 250px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.off-screen-menu.active {
+    right: 0;
+    display: block;
+}
+
+.off-screen-menu a {
+    display: block;
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Set smaller font size for nav items */
+    padding: 10px; /* Space around links */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.off-screen-menu ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.off-screen-menu li {
+    width: 100%; /* Ensure each list item takes full width */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.off-screen-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Change background on hover */
 }
 
 nav {
-    display: none; /* Hide navigation by default */
-    position: absolute; /* Position it absolutely */
-    top: 60px; /* Adjust based on header height */
-    right: 0; /* Align to the right */
-    background-color: #000; /* Background color for dropdown */
-    width: 100%; /* Full width */
-    z-index: 10; /* Ensure it appears above other content */
-}
-
-nav.active {
-    display: block; /* Show nav when active */
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-}
-
-nav a {
-    display: block;
-    color: #fff;
-    text-align: center;
+    display: flex;
+    background-color: #0d2c70d8;
     padding: 1rem;
-    text-decoration: none;
 }
 
-nav a:hover {
-    text-decoration: overline;
-    color: #f6f6ee;
-    padding: 15px;
-}
-
-main {
-    margin: 0 auto;
-}
-
-h1 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-align: center;
-    padding: 15px;
-    padding-bottom: 20px;
-}
-
-.card, .full-width-card {
-    background-color: #fff;
-    border-radius: 10px;
-    border: 2px solid #d3d2d2; /* Border style */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-    padding: 20px;
-}
-
-.full-width-card {
-    grid-column: 1 / -1; /* Make this section span across all columns */
-    background-color: #ffffffd8; /* Background color similar to other sections */
-    color: white; /* Text color */
-    padding: 20px; /* Padding for spacing */
-    text-align: center; /* Center-align the content */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    font-size: 1.5rem; /* Adjust the font size if needed */
-}
-
-.category-tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.category-button {
-    background-color: #000000d8;
-    color: white;
-    border: #000000;
-    padding: 10px 20px; 
+.ham-menu {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
     cursor: pointer;
-    font-size: 1rem;
-    margin: 0 10px;
-    border-radius: 5px;
-    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.category-button.active {
-    background-color: #7d8ba9;
+.ham-menu:hover {
+    background-color: #0d2c70d8; /* Change background on hover */
+    transform: scale(1.1); /* Slightly scale the icon */
 }
 
-.course-buttons {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space out columns evenly */
-    margin: 20px 0; /* Add some margin around */
+
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease;
 }
 
-.button-column {
-    flex: 1; /* Each column takes up equal space */
-    margin: 0 10px; /* Space between columns */
+.ham-menu:hover span {
+    background-color: white; /* Change color of bars on hover */
 }
 
-.course-button {
-    display: block; /* Make buttons stack vertically */
-    width: 100%; /* Full width of the column */
-    padding: 10px; /* Padding for buttons */
-    margin: 5px 0; /* Space between buttons */
-    background-color: #658fba; /* Button background color */
-    color: rgb(0, 0, 0); /* Button text color */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s; /* Transition effect */
+.ham-menu span:nth-child(1) {
+    top: 25%;
 }
 
-.course-button:hover {
-    background-color: #0056b3; /* Darker color on hover */
+.ham-menu span:nth-child(3) {
+    top: 75%;
 }
 
-.course-button.active {
-    background-color: #0056b3; /* Active button color */
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.image-container {
-    display: flex;
-    justify-content: center; /* Center the image horizontally */
-    margin-top: 20px; /* Add margin to the top */
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
 }
 
-.Place {
-    max-width: 100%; /* Ensure the image is responsive */
-    height: auto; /* Maintain aspect ratio */
+.ham-menu.active span:nth-child(3) {
+    opacity: 0;
 }
 
-.philippines-flag {
-    width: 30px;  /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensures it appears on a new line */
-    margin: 10px auto 0; /* Center the flag and add margin at the top */
-}
-
-/* Mobile Styles */
-@media (max-width: 639px) {
-    .menu-toggle {
-        display: block; /* Show the menu toggle */
-        cursor: pointer; /* Pointer on hover */
-        margin-left: auto; /* Push toggle to the right */
-    }
-
-    nav {
-        display: none; /* Hide navigation by default */
-    }
-
-    nav.active {
-        display: block; /* Show the nav when active */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack items vertically */
-        width: 100%; /* Full width */
-        padding: 10px; /* Add padding */
-        margin: 0; /* Remove default margin */
-        list-style: none; /* Remove bullet points */
-    }
-
-    nav ul li {
-        text-align: center; /* Center text */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Divider */
-    }
-
-    nav a {
-        padding: 10px; /* Increase padding for touch targets */
-        color: white; /* Ensure text is white */
-        text-decoration: none; /* Remove underline */
-    }
-
-    nav a:hover {
-        background-color: rgba(255, 255, 255, 0.2); /* Background on hover */
-    }
-}
-
-@media (min-width: 640px) {
-    nav ul {
-        display: flex;
-    }
-
-    nav ul li {
-        flex: 1 1 100%;
-    }
+.ham-menu.active span:nth-child(4) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 main {
@@ -238,31 +153,129 @@ main {
     margin: 20px;
 }
 
-.card {
+.card, .full-width-card {
     background-color: #fff;
     border-radius: 10px;
     border: 2px solid #d3d2d2;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
     padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-.card h2 {
+.card:hover, .full-width-card:hover {
+    transform: scale(1.02); /* Slightly scale the card */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    background-color: #f7f7f7; /* Change background color on hover */
+}
+
+.card h2, .full-width-card h2 {
     text-align: center;
+}
+
+.full-width-card {
+    grid-column: 1 / -1; /* Make this section span across all columns */
+    background-color: #ffffffd8; /* Background color similar to other sections */
+    color: black; /* Text color */
+    padding: 20px; /* Padding for spacing */
+    text-align: center; /* Center-align the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    font-size: 1.5rem; /* Adjust the font size if needed */
+    margin-top: 20px; /* Space above */
 }
 
 section h2 {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Size of mini header */
+    background-color: #0d2c70d8; /* Same color as main header */
+    color: #fff; /* Text color */
+    text-align: center; /* Center align text */
+    padding: 10px; /* Adjust padding to your liking */
+    border-radius: 5px; /* Optional: Slightly round the corners */
+    margin: 20px 0; /* Space above and below */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.05); /* Slightly scale the image */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.category-button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #d3d2d2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.category-button.active {
     background-color: #0d2c70d8;
     color: #fff;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px 10px 0 0;
+}
+
+.course-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.course-details {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background for details */
+    border-radius: 5px; /* Rounded corners */
+    display: none; /* Hide by default */
+}
+
+
+.button-column {
+    margin: 0 10px;
+}
+
+.course-button {
+    padding: 10px 20px;
+    background-color: #d3d2d2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px 0;
 }
 
 footer {
     background-color: #0d2c70d8;
-    color: #fff;
-    padding: 20px 0;
+    color: white;
     text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.philippines-flag {
+    width: 20px; /* Small logo size */
+    height: auto;
+}
+
+@media (max-width: 639px) {
+    .full-width-card {
+        padding: 15px; /* Adjust padding for mobile */
+        font-size: 1.2rem; /* Adjust font size for readability */
+    }
 }
