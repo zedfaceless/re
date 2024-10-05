@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to the Local Chamber of Commerce. Join us to support and promote businesses in the community.">
+  <title>Chamber of Commerce - Home</title>
+  <link rel="stylesheet" href="style/index.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+  <header class="header-container">
+    <img src="image/Local.png" alt="Chamber of Commerce Logo" class="logo">
+    <nav>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul id="nav-list">
+        <li><a href="https://zedfaceless.github.io/wdd231/chamber/index.html">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="https://zedfaceless.github.io/wdd231/chamber/directory.html">Members</a></li>
+        <li><a href="/events">Events</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('image/hero.webp'); background-size: cover; background-position: center; height: 100vh; color: white; text-align: center; padding: 100px 20px; display: flex; flex-direction: column; justify-content: center;">
+    <div class="hero-text" style="margin-bottom: 50px;">
+      <h1>Welcome to the Local Chamber of Commerce</h1>
+      <a href="/join" class="cta-button">Join Us</a>
+    </div>
+  </section>
+
+  <!-- Current Events Section -->
+   <!-- Weather and Events Section -->
+<section class="weather-events">
+    <div class="events">
+      <h2>Upcoming Events</h2>
+      <ul id="events-list">
+        <li>Saturday Morning & Afternoon Session - October 11, 2024</li>
+        <li>Sunday Morning Session - October 12, 2024</li>
+        <li>Sunday Afternoon Session - October 13, 2024</li>
+      </ul>
+    </div>
+  
+    <div class="weather">
+      <h2>Current Weather</h2>
+      <p id="current-weather">Loading weather...</p>
+      <ul id="forecast"></ul>
+    </div>
+  </section>
+  
+
+  <!-- Company Spotlights Section -->
+  <section class="spotlights">
+    <h2>Member Spotlights</h2>
+    <div id="spotlight-container">
+      <!-- Spotlights will be loaded dynamically using JavaScript -->
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+        <div class="footer-content">
+          <p>Contact Information: <a href="mailto:zedfaces.fernandez@gmail.com">zedfaces.fernandez@gmail.com</a> | +63 961 568 9971 </p>
+          <p>Developed by Melchizedek Fernandez for WDD 231</p>
+          <p>Last Updated: <span id="last-modified"></span></p>
+          <p>&copy; <span id="year"></span> Local Chamber of Commerce</p>
+          <img src="image/flag-ph.webp" alt="Philippines Flag" class="flag">
+        </div>
+      </div>
+  </footer>
+
+  <script src="scripts/index.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

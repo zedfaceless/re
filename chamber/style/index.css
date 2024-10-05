@@ -1,0 +1,246 @@
+/* Basic styles for the homepage */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header styles */
+  .header-container {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .header-container .logo {
+    width: 120px;
+    height: auto;
+  }
+
+  nav {
+    position: relative;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+    font-size: 1.1em;
+    transition: all 0.50s ease;
+  }
+
+  nav ul li a:hover {
+    color: pink;
+  }
+
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffce00;
+    left: 50%;
+    bottom: 0;
+    transition: all 0.50s ease;
+  }
+
+  nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  nav ul li a.active {
+    color: #ffce00;
+  }
+  
+  nav ul li a.active::after {
+    width: 100%;
+    left: 0;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Hero section */
+  .hero {
+    background-image: url('image/hero.webp'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh; 
+    color: white; 
+    text-align: center; 
+    padding: 100px 20px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+  }
+  
+  
+  .hero-text {
+    color: rgb(23, 6, 6);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .cta-button {
+    background-color: rgba(14, 10, 1, 0.8); /* Orange background with some transparency */
+    color: white; /* Text color */
+    padding: 15px 30px; /* Adds padding to the button */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounds the corners */
+    text-decoration: none; /* Removes underline */
+    font-size: 20px; /* Increases font size */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+
+  
+
+  .cta-button:hover {
+    background-color: rgba(223, 19, 114, 0.8); /* Darkens the button on hover */
+  }
+  
+  /* Current Events */
+  .events {
+    padding: 20px;
+  }
+  
+  /* Weather section */
+  .weather {
+    padding: 20px;
+  }
+
+  .weather-events {
+    display: flex;
+    justify-content: space-between; /* Align items on the left and right */
+    margin: 20px; /* Add margin as needed */
+  }
+  
+  .events, .weather {
+    flex: 1; /* Allow sections to grow equally */
+    padding: 20px; /* Add some padding */
+    box-sizing: border-box; /* Include padding in width calculation */
+    border: 1px solid #ccc; /* Optional: add border for visual separation */
+    margin: 0 10px; /* Optional: space between sections */
+    min-height: 200px; /* Optional: set a minimum height */
+  }
+
+  .weather-events h2 {
+    background-color: #333; /* Replace with your header background color */
+    color: white; /* Text color to contrast with the background */
+    padding: 10px 15px; /* Add some padding for spacing */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    margin-bottom: 15px; /* Space below the header */
+    text-align: center; /* Center the header text */
+  }
+
+  .weather-events .events, 
+.weather-events .weather {
+  width: 48%; /* Ensure both sections take equal space */
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weather-events .events:hover, 
+.weather-events .weather:hover {
+  transform: scale(1.05); /* Slightly enlarge the section */
+  box-shadow: 0 4px 20px rgba(0, 77, 153, 0.5); /* Add a shadow effect */
+}
+
+  /* Spotlights section */
+  .spotlights {
+    border: 3px solid #333; 
+    border-radius: 10px; 
+    padding: 15px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for smooth effect */
+  }
+
+  .spotlight-member {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+
+  .spotlights h2 {
+    background-color: #333; /* Replace with your header background color */
+    color: white; /* Text color to contrast with the background */
+    padding: 10px 15px; /* Add some padding for spacing */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    margin-bottom: 15px; /* Space below the header */
+    text-align: center; /* Center the header text */
+  }
+  
+  .spotlight-member img {
+    width: 50px;
+    height: auto;
+    display: block;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    text-align: center;
+  }
+  
+  .footer-content a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .flag {
+    width: 30px;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px)   {
+  
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  .events-weather {
+    flex-direction: column; /* Stack the sections on smaller screens */
+  }
+}
