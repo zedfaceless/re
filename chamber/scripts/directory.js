@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <p><strong>Address:</strong> ${member.address}</p>
           <p><strong>Phone:</strong> <a href="tel:${member.phone}">${member.phone}</a></p>
           <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
-          <p><strong>Membership Level:</strong> ${getMembershipLevel(member.level)}</p>
+          <p><strong>Membership Level:</strong> ${getMembershipLevel(member.level || member.membership_level)}</p>
         </div>
       `;
       
@@ -49,20 +49,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Toggle view functions
-gridViewBtn.addEventListener('click', () => {
-  membersContainer.classList.remove('list-view');
-  membersContainer.classList.add('grid-view');
-  gridViewBtn.classList.add('active');
-  listViewBtn.classList.remove('active');
-});
-
-listViewBtn.addEventListener('click', () => {
-  membersContainer.classList.remove('grid-view');
-  membersContainer.classList.add('list-view');
-  listViewBtn.classList.add('active');
-  gridViewBtn.classList.remove('active');
-});
-
+  gridViewBtn.addEventListener('click', () => {
+    membersContainer.classList.remove('list-view');
+    membersContainer.classList.add('grid-view');
+    gridViewBtn.classList.add('active');
+    listViewBtn.classList.remove('active');
+  });
+  
+  listViewBtn.addEventListener('click', () => {
+    membersContainer.classList.remove('grid-view');
+    membersContainer.classList.add('list-view');
+    listViewBtn.classList.add('active');
+    gridViewBtn.classList.remove('active');
+  });
+  
 
   // Toggle navigation menu on mobile
   menuIcon.addEventListener('click', () => {

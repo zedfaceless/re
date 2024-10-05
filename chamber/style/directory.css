@@ -93,11 +93,9 @@ nav {
 
 /* Member Card */
 .member-card {
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  border: 1px solid #ccc; /* Optional: border for visibility */
+  padding: 10px; /* Optional: padding inside cards */
+  margin-bottom: 20px; /* Space between cards */
 }
 
 .member-card:hover {
@@ -129,25 +127,25 @@ nav {
 
 /* List View */
 .list-view {
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping */
-  gap: 20px; /* Space between items */
+  display: block; /* Make sure the container is in block display */
 }
 
+/* Each member card in list view should take full width */
 .list-view .member-card {
-  flex: 0 0 calc(50% - 10px); /* 50% width minus gap for two columns */
-  display: flex;
-  align-items: center;
+  display: block; /* Make sure cards are block-level elements */
+  width: 100%; /* Full width for each member card */
+  margin: 0; /* Remove any margin to prevent spacing issues */
 }
 
+/* Optional: Style for the member image */
 .list-view .member-card img {
-  width: 150px;
-  height: 150px;
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
 }
-
 .list-view .member-info {
-  padding: 15px;
-  flex: 1; /* Allow member-info to take up remaining space */
+  padding: 15px; /* Add padding to the member info */
+  border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+  background-color: #f9f9f9; /* Optional: Light background color */
 }
 
 

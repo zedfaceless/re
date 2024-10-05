@@ -5,7 +5,7 @@
       "phone": "+63 912 345 6789",
       "website": "https://www.luzvimindaelectronics.com",
       "image": "image/Electronics.webp",
-      "level": 3
+      "level": "gold"
     },
     {
       "name": "Bayanihan Textiles",
@@ -13,7 +13,7 @@
       "phone": "+63 923 456 7890",
       "website": "https://www.bayanihantextiles.com",
       "image": "image/Textile.webp",
-      "level": 2
+      "level": "silver"
     },
     {
       "name": "Maharlika Foods",
@@ -21,7 +21,7 @@
       "phone": "+63 934 567 8901",
       "website": "https://www.maharlikafoods.com",
       "image": "image/Food.webp",
-      "level": 1
+      "level": "bronze"
     },
     {
       "name": "Tagalog Transport",
@@ -29,7 +29,7 @@
       "phone": "+63 945 678 9012",
       "website": "https://www.tagalogtransport.com",
       "image": "image/Transport.webp",
-      "level": 2
+      "level": "silver"
     },
     {
       "name": "Manila Marketing",
@@ -37,7 +37,7 @@
       "phone": "+63 956 789 0123",
       "website": "https://www.manilamarketing.com",
       "image": "image/Marketing.webp",
-      "level": 3
+      "level": "gold"
     },
     {
       "name": "Visayan Ventures",
@@ -45,7 +45,7 @@
       "phone": "+63 967 890 1234",
       "website": "https://www.visayanventures.com",
       "image": "image/ventures.webp",
-      "level": 1
+      "level": "bronze"
     },
     {
       "name": "Mindanao Mining",
@@ -53,7 +53,7 @@
       "phone": "+63 978 901 2345",
       "website": "https://www.mindanaomining.com",
       "image": "image/mining.webp",
-      "level": 2
+      "level": "silver"
     },
     {
       "name": "Palawan Paradise Resorts",
@@ -61,7 +61,7 @@
       "phone": "+63 989 012 3456",
       "website": "https://www.palawanparadiseresorts.com",
       "image": "image/Resort (1).webp",
-      "level": 3
+      "level": "gold"
     },
     {
       "name": "Bicol Biotech",
@@ -69,7 +69,7 @@
       "phone": "+63 990 123 4567",
       "website": "https://www.bicolbiotech.com",
       "image": "image/Biotech.jpeg",
-      "level": 1
+      "level": "bronze"
     },
     {
         "name": "Island Hoppers Travel Agency",
@@ -77,7 +77,7 @@
         "phone": "+63 912 345 6783",
         "website": "http://islandhopperstravel.com",
         "image": "image/Travel.webp",
-        "membership_level": 2
+        "membership_level": "silver"
       },
       {
         "name": "Artisan Handicrafts",
@@ -85,7 +85,7 @@
         "phone": "+63 912 345 6784",
         "website": "http://artisanhandicrafts.com",
         "image": "image/Handicraft.webp",
-        "membership_level": 3
+        "membership_level": "gold"
       },
       {
         "name": "Tech Innovators Inc.",
@@ -93,7 +93,7 @@
         "phone": "+63 912 345 6785",
         "website": "http://techinnovators.com",
         "image": "image/Innovators.webp",
-        "membership_level": 1
+        "membership_level": "bronze"
       }
   ]
   
