@@ -21,6 +21,7 @@
         </ul>
       </nav>
     </header>
+    
     <h1>Membership Application Form</h1>
     
     <form method="GET" action="thankyou.html">
@@ -57,6 +58,7 @@
         <div>
             <label for="membershipLevel">Membership Level:</label>
             <select id="membershipLevel" name="membershipLevel" required>
+                <option value="">Please select an option</option>
                 <option value="NP Membership">NP Membership (No Fee)</option>
                 <option value="Bronze Membership">Bronze Membership</option>
                 <option value="Silver Membership">Silver Membership</option>
@@ -69,7 +71,7 @@
             <textarea id="description" name="description" title="Describe your business or organization"></textarea>
         </div>
         
-        <input type="hidden" id="timestamp" name="timestamp" value="<?php echo date('Y-m-d H:i:s'); ?>" />
+        <input type="hidden" id="timestamp" name="timestamp" value="<?php echo date('Y-m-d H:i:s'); ?>">
         
         <div>
             <input type="submit" value="Submit Application" title="Submit your application">
@@ -119,7 +121,7 @@
         <div class="modal-content">
             <span class="close" data-modal="modal3">&times;</span>
             <h2>Silver Membership Benefits</h2>
-            <p>Our Silver Membership provides additional benefits for growing organizations. Members enjoy all Bronze Membership benefits plus exclusive access to targeted advertising opportunities, special event discounts, and enhanced networking sessions with industry leaders. This tier is ideal for businesses seeking to elevate their presence and maximize impact.</p>
+            <p>Our Silver Membership provides additional benefits for growing organizations. Members enjoy all Bronze Membership Benefits plus exclusive access to targeted advertising opportunities, special event discounts, and enhanced networking sessions with industry leaders. This tier is ideal for businesses seeking to elevate their presence and maximize impact.</p>
         </div>
     </div>
     
@@ -144,5 +146,35 @@
       </footer>
     
     <script src="scripts/join.js"></script>
+    <script>
+        // JavaScript for handling modal opening and closing
+        document.querySelectorAll('[data-modal]').forEach(item => {
+            item.addEventListener('click', event => {
+                const modalId = event.target.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'block';
+            });
+        });
+
+        // Close modals when the 'x' is clicked
+        document.querySelectorAll('.close').forEach(closeButton => {
+            closeButton.addEventListener('click', event => {
+                const modalId = event.target.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'none';
+            });
+        });
+
+        // Close modals when clicking outside the modal content
+        window.addEventListener('click', event => {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        });
+
+        // Set the last modified date and current year in the footer
+        document.getElementById('last-modified').textContent = document.lastModified;
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

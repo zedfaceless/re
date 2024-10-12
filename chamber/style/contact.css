@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+header {
+    background-color: #1a1a1a; /* Same background color as home
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow to
+}
+
+header nav a {
+    color: white; /* Text color in the navigation */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #4CAF50; /* Hover effect for navigation links */
+}
+
+.header-container {
+    display: flex;
+    justify-content: flex-start; /* Aligns content to the left */
+    align-items: center;
+    padding: 10px;
+    background-color: #1a1a1a; /* Matches your header background */
+    position: relative; 
+}
+
+.logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintains aspect ratio */
+    margin-right: 20px; /* Adds space between the logo and other */
+}
+
+nav {
+    position: relative;
+  }
+    
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+    
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+    font-size: 1.1em;
+    transition: all 0.50s ease;
+  }
+  nav ul li a:hover {
+    color: pink;
+  }
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffce00;
+    left: 50%;
+    bottom: 0;
+    transition: all 0.50s ease;
+  }
+  nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  nav ul li a.active {
+    color: #ffce00;
+  }
+    
+  nav ul li a.active::after {
+    width: 100%;
+    left: 0;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+
+
+.contact-section {
+    padding: 20px;
+    margin: 20px;
+    background: #f4f4f4;
+    border-radius: 5px;
+}
+
+.contact-section h1 {
+    color: #333;
+}
+
+.contact-section h2 {
+    color: #666;
+}
+
+.footer-content {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+    
+  .footer-content {
+    text-align: center;
+  }
+    
+  .footer-content a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .flag {
+    width: 30px;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  /* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Smaller base font size for mobile */
+    }
+
+    .header-container {
+        padding: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column; /* Stack the navigation items */
+        text-align: center;
+    }
+
+    .nav-menu li {
+        margin: 5px 0; /* Adjust margins for mobile */
+    }
+
+    .contact-section, .event-section, .about-section {
+        margin: 10px; /* Smaller margins for sections */
+        padding: 15px; /* Less padding for mobile */
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust h1 size */
+    }
+
+    h2 {
+        font-size: 20px; /* Adjust h2 size */
+    }
+}
+
