@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+header {
+    background-color: #1a1a1a; /* Same background color as homepage */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow to header */
+}
+
+header nav a {
+    color: white; /* Text color in the navigation */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #4CAF50; /* Hover effect for navigation links */
+}
+
+.header-container {
+    display: flex;
+    justify-content: flex-start; /* Aligns content to the left */
+    align-items: center; /* Vertically centers content inside the header */
+    padding: 10px;
+    background-color: #1a1a1a; /* Matches your header background */
+    position: relative; /* Makes the container adapt to its content */
+}
+
+.logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintains aspect ratio */
+    margin-right: 20px; /* Adds space between the logo and other elements */
+}
+
+nav {
+  position: relative;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  padding: 0; /* Reset padding */
+  margin: 0; /* Reset margin */
+  border: none; /* Ensure there's no border */
+}
+
+nav ul li {
+  border: none; /* Ensure there's no border on list items */
+}
+  
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  position: relative;
+  font-size: 1.1em;
+  transition: all 0.50s ease;
+}
+nav ul li a:hover {
+  color: pink;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ffce00;
+  left: 50%;
+  bottom: 0;
+  transition: all 0.50s ease;
+}
+nav ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+nav ul li a.active {
+  color: #ffce00;
+}
+  
+nav ul li a.active::after {
+  width: 100%;
+  left: 0;
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+h1 {
+  text-align: center; /* Center the heading */
+  font-size: 3em; /* Increase the font size */
+  margin-bottom: 20px; /* Space below the heading */
+}
+p {
+    font-size: 1em; /* Adjust paragraph font size to be smaller than H1 */
+    text-align: center; /* Center the paragraph text */
+    margin-bottom: 10px; /* Space below the paragraph */
+}
+
+ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 20px; /* Add padding inside the ul for better spacing */
+    border: 3px solid #000; /* Add a thick border around the whole ul */
+    border-radius: 5px; /* Optional: round the corners of the border */
+    margin: 20px auto; /* Center the ul with margin */
+    max-width: 600px; /* Optional: set a max width for the ul */
+}
+
+ul li {
+    margin: 10px 0; /* Space between list items */
+    font-size: 1em; /* Font size for list items */
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+  
+.footer-content {
+  text-align: center;
+}
+  
+.footer-content a {
+  color: #fff;
+  text-decoration: underline;
+}
+.flag {
+  width: 30px;
+  height: auto;
+  margin-top: 10px;
+}

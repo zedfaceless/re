@@ -86,16 +86,26 @@ nav {
 }
 
 #members-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Member Card */
-.member-card {
-  border: 1px solid #ccc; /* Optional: border for visibility */
-  padding: 10px; /* Optional: padding inside cards */
-  margin-bottom: 20px; /* Space between cards */
+
+.grid-view .member-card {
+  flex: 1 0 30%; /* Adjusts width of cards in grid view */
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.list-view .member-card {
+  display: block; /* Ensures each card is on a new line */
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 .member-card:hover {
@@ -125,16 +135,39 @@ nav {
   text-decoration: none;
 }
 
-/* List View */
-.list-view {
-  display: block; /* Make sure the container is in block display */
+#members-container.list-view {
+  display: flex; /* Use flexbox to align items */
+  flex-direction: column; /* Stack items vertically */
+  max-width: 800px; /* Set a maximum width for the list */
+  margin: 0 auto; /* Center the container */
+}
+
+.member-card {
+  display: flex; /* Use flexbox for each member card */
+  flex-direction: column; /* Stack the image and info vertically */
+  justify-content: center; /* Center the content */
+  align-items: flex-start; /* Align items to the left */
+  border: 1px solid #ccc; /* Optional border for cards */
+  padding: 15px; /* Padding around each card */
+  margin: 10px 0; /* Margin between cards */
+  width: 100%; /* Full width */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  background-color: #fff; /* Background color for cards */
+}
+
+.member-info {
+  width: 100%; /* Ensure member info takes full width */
+}
+
+/* Ensure each card has a minimum height for uniformity */
+.member-card {
+  min-height: 120px; /* Adjust height as needed */
 }
 
 /* Each member card in list view should take full width */
 .list-view .member-card {
-  display: block; /* Make sure cards are block-level elements */
-  width: 100%; /* Full width for each member card */
-  margin: 0; /* Remove any margin to prevent spacing issues */
+  display: flex; /* Make sure cards are block-level elements */
+  margin: 5px 0; /* Remove any margin to prevent spacing issues */
 }
 
 /* Optional: Style for the member image */

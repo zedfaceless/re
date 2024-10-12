@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/thankyou.css">
+</head>
+<body>
+  <header class="header-container">
+      <img src="image/Local.png" alt="Chamber of Commerce Logo" class="logo">
+      <nav>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul id="nav-list">
+          <li><a href="https://zedfaceless.github.io/wdd231/chamber/index.html">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="https://zedfaceless.github.io/wdd231/chamber/directory.html">Members</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h1>Thank You for Your Submission!</h1>
+    
+    <p>We appreciate your interest in joining us. Here’s a summary of your application:</p>
+    
+    <ul>
+        <li><strong>First Name:</strong> <span id="firstName"></span></li>
+        <li><strong>Last Name:</strong> <span id="lastName"></span></li>
+        <li><strong>Email:</strong> <span id="email"></span></li>
+        <li><strong>Mobile Number:</strong> <span id="mobile"></span></li>
+        <li><strong>Business/Organization Name:</strong> <span id="orgName"></span></li>
+        <li><strong>Submission Timestamp:</strong> <span id="timestamp"></span></li>
+    </ul>
+    
+    <script>
+        // Populate the fields with the data from the query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('firstName').textContent = urlParams.get('firstName');
+        document.getElementById('lastName').textContent = urlParams.get('lastName');
+        document.getElementById('email').textContent = urlParams.get('email');
+        document.getElementById('mobile').textContent = urlParams.get('mobile');
+        document.getElementById('orgName').textContent = urlParams.get('orgName');
+        document.getElementById('timestamp').textContent = urlParams.get('timestamp');
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+              <p>Contact Information: <a href="mailto:zedfaces.fernandez@gmail.com">zedfaces.fernandez@gmail.com</a> | +63 961 568 9971 </p>
+              <p>Developed by Melchizedek Fernandez for WDD 231</p>
+              <p>Last Updated: <span id="last-modified"></span></p>
+              <p>&copy; <span id="year"></span> Local Chamber of Commerce</p>
+              <img src="image/flag-ph.webp" alt="Philippines Flag" class="flag">
+            </div>
+          </div>
+      </footer>
+    
+    <script src="scripts/join.js"></script>
+</body>
+</html>

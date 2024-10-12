@@ -1,0 +1,283 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+header {
+    background-color: #1a1a1a; /* Same background color as homepage */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow to header */
+}
+
+header nav a {
+    color: white; /* Text color in the navigation */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #4CAF50; /* Hover effect for navigation links */
+}
+
+.header-container {
+    display: flex;
+    justify-content: flex-start; /* Aligns content to the left */
+    align-items: center; /* Vertically centers content inside the header */
+    padding: 10px;
+    background-color: #1a1a1a; /* Matches your header background */
+    position: relative; /* Makes the container adapt to its content */
+}
+
+.logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintains aspect ratio */
+    margin-right: 20px; /* Adds space between the logo and other elements */
+}
+
+nav {
+    position: relative;
+  }
+    
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+    
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+    font-size: 1.1em;
+    transition: all 0.50s ease;
+  }
+  nav ul li a:hover {
+    color: pink;
+  }
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffce00;
+    left: 50%;
+    bottom: 0;
+    transition: all 0.50s ease;
+  }
+  nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  nav ul li a.active {
+    color: #ffce00;
+  }
+    
+  nav ul li a.active::after {
+    width: 100%;
+    left: 0;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+
+  form {
+    border: 3px solid black;
+    padding: 20px;
+    width: 50%; /* Set width to 50% for a larger form */
+    max-width: 700px; /* Limit the max width for better design on large screens */
+    margin: 0 auto; /* Center the form */
+    margin-top: 25px; /* Add top margin for spacing */
+    margin-bottom: 25px; /* Add bottom margin for spacing */
+    background-color: #f9f9f9; /* Light background for contrast */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+form label {
+    font-size: 1.2em; /* Increase font size for labels */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="submit"],
+form select,
+form textarea {
+    font-size: 1.2em; /* Increase font size for inputs and textarea */
+    width: 100%; /* Make inputs and textareas full width */
+    padding: 15px; /* Increase padding for a larger feel */
+    margin-bottom: 15px; /* Add space between inputs */
+    box-sizing: border-box; /* Ensure padding doesn’t break width */
+    border: 2px solid #ccc; /* Add border for better visibility */
+    border-radius: 5px; /* Rounded corners for a friendlier look */
+}
+
+form textarea {
+    height: 150px; /* Set a specific height for the textarea */
+}
+
+form input[type="submit"] {
+    font-size: 1.2em; /* Larger text for the submit button */
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.membership-cards .card {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    font-size: 1.1em; /* Adjust card text size */
+}
+
+
+
+h1 {
+    text-align: center;
+    color: #007BFF; /* Matching the border color for uniformity */
+    margin-bottom: 30px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+select, 
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.membership-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.card {
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%; /* Adjust width to fit two cards per row */
+    margin: 10px 0;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.card h2 {
+    color: #007BFF;
+}
+
+.card p {
+    font-size: 18px;
+}
+
+.card a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+    
+  .footer-content {
+    text-align: center;
+  }
+    
+  .footer-content a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .flag {
+    width: 30px;
+    height: auto;
+    margin-top: 10px;
+  }

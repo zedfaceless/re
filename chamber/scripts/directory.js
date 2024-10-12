@@ -6,10 +6,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuIcon = document.getElementById('menu-icon');
   const navMenu = document.querySelector('.nav-menu');
 
+  let membersData = []; // Array to hold member data
+
   // Fetch and display members
   fetch(membersUrl)
     .then(response => response.json())
-    .then(data => displayMembers(data))
+    .then(data => {
+      membersData = data; // Store the fetched data
+      displayMembers(data); // Display in default grid view
+    })
     .catch(error => console.error('Error fetching members:', error));
 
   // Display members function
@@ -18,25 +23,40 @@ document.addEventListener('DOMContentLoaded', () => {
     members.forEach(member => {
       const card = document.createElement('div');
       card.classList.add('member-card');
-      
-      card.innerHTML = `
-        <img src="${member.image}" alt="${member.name}">
-        <div class="member-info">
-          <h3>${member.name}</h3>
-          <p><strong>Address:</strong> ${member.address}</p>
-          <p><strong>Phone:</strong> <a href="tel:${member.phone}">${member.phone}</a></p>
-          <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
-          <p><strong>Membership Level:</strong> ${getMembershipLevel(member.level || member.membership_level)}</p>
-        </div>
-      `;
-      
+
+      // Check current view mode
+      if (membersContainer.classList.contains('grid-view')) {
+        // Grid view with image
+        card.innerHTML = `
+          <img src="${member.image}" alt="${member.name}">
+          <div class="member-info">
+            <h3>${member.name}</h3>
+            <p><strong>Address:</strong> ${member.address}</p>
+            <p><strong>Phone:</strong> <a href="tel:${member.phone}">${member.phone}</a></p>
+            <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+            <p><strong>Membership Level:</strong> ${getMembershipLevel(member.level || member.membership_level)}</p>
+          </div>
+        `;
+      } else {
+        // List view without image
+        card.innerHTML = `
+          <div class="member-info">
+            <h3>${member.name}</h3>
+            <p><strong>Address:</strong> ${member.address}</p>
+            <p><strong>Phone:</strong> <a href="tel:${member.phone}">${member.phone}</a></p>
+            <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+            <p><strong>Membership Level:</strong> ${getMembershipLevel(member.level || member.membership_level)}</p>
+          </div>
+        `;
+      }
+
       membersContainer.appendChild(card);
     });
   }
 
   // Get membership level text
   function getMembershipLevel(level) {
-    switch(level) {
+    switch (level) {
       case 1:
         return 'Member';
       case 2:
@@ -52,17 +72,18 @@ document.addEventListener('DOMContentLoaded', () => {
   gridViewBtn.addEventListener('click', () => {
     membersContainer.classList.remove('list-view');
     membersContainer.classList.add('grid-view');
+    displayMembers(membersData); // Refresh the displayed members
     gridViewBtn.classList.add('active');
     listViewBtn.classList.remove('active');
   });
-  
+
   listViewBtn.addEventListener('click', () => {
     membersContainer.classList.remove('grid-view');
     membersContainer.classList.add('list-view');
+    displayMembers(membersData); // Refresh the displayed members
     listViewBtn.classList.add('active');
     gridViewBtn.classList.remove('active');
   });
-  
 
   // Toggle navigation menu on mobile
   menuIcon.addEventListener('click', () => {
@@ -71,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Close menu when a link is clicked (optional)
   navMenu.addEventListener('click', (e) => {
-    if(e.target.tagName === 'A') {
+    if (e.target.tagName === 'A') {
       navMenu.classList.remove('active');
     }
   });
