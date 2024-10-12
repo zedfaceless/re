@@ -281,3 +281,50 @@ input[type="submit"]:hover {
     height: auto;
     margin-top: 10px;
   }
+
+  @media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Smaller base font size for mobile */
+    }
+
+    header {
+        padding: 15px; /* Reduce padding */
+    }
+
+    .header-container {
+        flex-direction: column; /* Stack items */
+        align-items: center; /* Center items */
+    }
+
+    .logo {
+        width: 120px; /* Smaller logo for mobile */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Space between navigation items */
+    }
+
+    form {
+        width: 90%; /* Make form wider on mobile */
+        padding: 15px; /* Reduce padding */
+    }
+
+    h1 {
+        font-size: 22px; /* Smaller font size for headings */
+    }
+
+    .membership-cards .card {
+        width: 100%; /* Full width for cards */
+        margin: 10px 0; /* Space between cards */
+    }
+
+    footer {
+        padding: 15px; /* Reduce footer padding */
+    }
+}
