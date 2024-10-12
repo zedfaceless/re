@@ -35,7 +35,7 @@ header nav a:hover {
 }
 
 .logo {
-    width: 150px; /* Adjust size as needed */
+    width: 100px; /* Adjust size as needed */
     height: auto; /* Maintains aspect ratio */
     margin-right: 20px; /* Adds space between the logo and other */
 }

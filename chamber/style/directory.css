@@ -1,68 +1,99 @@
-/* General Styles */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  box-sizing: border-box;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  overflow: hidden;
-}
-
-/* Header */
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
+  background-color: #1a1a1a; /* Same background color as homepage */
+  color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow to header */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically centers content inside the header */
 }
 
-header h1 {
-  margin: 0;
-  text-align: center;
+header nav {
+  flex: 1; /* Allows the nav to take remaining space */
 }
+
+header nav a {
+  color: white; /* Text color in the navigation */
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #4CAF50; /* Hover effect for navigation links */
+}
+
+.header-container {
+  display: flex;
+  align-items: center; /* Vertically centers content inside the header */
+  padding: 10px;
+  background-color: #1a1a1a; /* Matches your header background */
+  position: relative; /* Makes the container adapt to its content */
+}
+
+.logo {
+  width: 100px; /* Adjust size as needed */
+  height: auto; /* Maintains aspect ratio */
+  margin-right: 20px; /* Adds space between the logo and other elements */
+}
+
 
 nav {
   position: relative;
 }
-
-.nav-menu {
-  list-style: none;
+  
+nav ul {
+  list-style-type: none;
   display: flex;
-  justify-content: center;
-  padding: 0;
+  gap: 20px;
 }
-
-.nav-menu li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.nav-menu a {
+  
+nav ul li a {
   color: white;
   text-decoration: none;
   padding: 10px 15px;
-  transition: all 0.3s ease-in-out; /* Smooth transition */
+  position: relative;
+  font-size: 1.1em;
+  transition: all 0.50s ease;
+}
+nav ul li a:hover {
+  color: pink;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ffce00;
+  left: 50%;
+  bottom: 0;
+  transition: all 0.50s ease;
+}
+nav ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+nav ul li a.active {
+  color: #ffce00;
+}
+  
+nav ul li a.active::after {
+  width: 100%;
+  left: 0;
 }
 
-.nav-menu a:hover {
-  background-color: #ffcc00; /* Change background color on hover */
-  color: #333; /* Change text color on hover */
-  border-radius: 4px; /* Optional: rounded corners on hover */
-  text-decoration: underline; /* Optional: underline on hover */
-}
-
-.menu-icon {
+.hamburger {
   display: none;
   font-size: 24px;
+  color: white;
   cursor: pointer;
-  position: absolute;
-  right: 20px;
-  top: 20px;
 }
 
 /* Main Content */
