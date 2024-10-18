@@ -1,0 +1,266 @@
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a | */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: lightblue;
+  --secondary-color: teal;
+  --accent1-color: Yellow;
+  --accent2-color: lightgrey;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "IM Fell French Canon SC";
+  --paragraph-font: Lato, Helvetica, sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: black;  /* headlines on a white background */ 
+  --headline-color-on-color: black; /* headlines on a colored background */ 
+  --paragraph-color-on-white: black; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: black; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #55cdd2  ;
+  --nav-link-color: black;
+  --nav-background-color: #55cdd2;
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: #f44708;
+}
+
+
+/*  Look around below...but DON'T CHANGE ANYTHING! */
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4em;
+  font-size: 18px;
+  text-align: center;
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+h2 {
+  text-align: center;
+}
+hr {
+  height: 3px;
+  margin: 35px 0;
+  background: var(--accent1-color);
+}
+header {
+  padding: 1em;
+  text-align: center;
+  color: var(--headline-color-on-color);
+  background-color: var(--paragraph-background-color);
+}
+header > h1, header > h2 {
+  color: var(--headline-color-on-color);
+}
+
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  padding: 1em;
+}
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+.colors th {
+  background-color: #999;
+}
+.colors td{
+  width: 25%;
+  height: 3em;
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
+.accent1 {
+  background-color: var(--accent1-color);
+}
+.accent2{
+  background-color: var(--accent2-color);
+}
+
+p.colored {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+}
+nav  {
+  list-style-type: none;
+  display: flex;
+
+}
+nav a {
+  padding:1em;
+  min-width: 120px;
+  text-decoration: none;
+  padding: 10px;
+
+}
+nav a:link, nav a:visited {
+  color: var(--nav-link-color);
+}
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+.sitemap {
+    display: grid;
+    justify-content: center; /* Center the grid */
+    grid-template-columns: repeat(5, 1fr); /* Create 5 equal columns */
+    grid-template-rows: auto; /* Automatically adjust height */
+    grid-template-areas: 
+      "home home home home home" /* Home spans all columns */
+      "page2 page3 page4 page5 page6"; /* Additional pages in one row */
+    position: relative; /* To position the connecting lines */
+  }
+  
+  .sitemap > div {
+    text-align: center;
+    border: 2px solid black; /* Optional: Add borders for visual separation */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+    margin: 10px; /* Add margin around each page */
+    position: relative; /* For the connecting lines */
+  }
+  
+  .sm-home {
+    grid-area: home;
+    background-color: #ccc; /* Background color for Home */
+    line-height: 3em;
+  }
+  
+  .sm-page2 {
+    grid-area: page2; /* Page 2 area */
+    background-color: #ccc; /* Background color */
+    line-height: 3em;
+  }
+  
+  .sm-page3 {
+    grid-area: page3; /* Page 3 area */
+    background-color: #ccc; /* Background color */
+    line-height: 3em;
+  }
+  
+  .sm-page4 {
+    grid-area: page4; /* Page 4 area */
+    background-color: #ccc; /* Background color */
+    line-height: 3em;
+  }
+  
+  .sm-page5 {
+    grid-area: page5; /* Page 5 area */
+    background-color: #ccc; /* Background color */
+    line-height: 3em;
+  }
+  
+  .sm-page6 {
+    grid-area: page6; /* Page 6 area */
+    background-color: #ccc; /* Background color */
+    line-height: 3em;
+  }
+  
+  /* Connecting lines from Home to each page */
+  .sm-page2::before,
+  .sm-page3::before,
+  .sm-page4::before,
+  .sm-page5::before,
+  .sm-page6::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -20px; /* Position it above each page */
+    width: 2px;
+    height: 20px; /* Height of the connecting line */
+    background: black;
+  }
+  
+  /* Adjust the position for each page's line */
+  .sm-page2::before {
+    transform: translateX(-50%); /* Center the line */
+  }
+  
+  .sm-page3::before {
+    transform: translateX(-50%); /* Center the line */
+  }
+  
+  .sm-page4::before {
+    transform: translateX(-50%); /* Center the line */
+  }
+  
+  .sm-page5::before {
+    transform: translateX(-50%); /* Center the line */
+  }
+  
+  .sm-page6::before {
+    transform: translateX(-50%); /* Center the line */
+  }
+  
+.top {
+  grid-area: top;
+  border-left: 1px solid;
+}
+
+.left {
+  grid-area: left;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.right {
+  grid-area: right;
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
+
+.logo {
+  width: 150px;
+}
+
+.footer-content {
+    background: #55cdd2;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+footer {
+    background-color: #55cdd2;
+    color: #fff;
+    padding: 20px 0;
+  }
+    
+  .footer-content {
+    text-align: center;
+  }
+    
+  .footer-content a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .flag {
+    width: 30px;
+    height: auto;
+    margin-top: 10px;
+  }
