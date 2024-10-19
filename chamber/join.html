@@ -6,6 +6,14 @@
     <title>Membership Application Form</title>
     <link rel="icon" href="image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/join.css">
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Apply for membership with the Local Chamber of Commerce.">
+    <meta name="author" content="Melchizedek Fernandez">
+    <meta property="og:title" content="Membership Application Form">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="image/your-image.jpg"> <!-- Replace with an actual image URL -->
+    <meta property="og:url" content="https://zedfaceless.github.io/wdd231/chamber/join.html">
 </head>
 <body>
   <header class="header-container">
@@ -157,24 +165,17 @@
             });
         });
 
-        // Close modals when the 'x' is clicked
-        document.querySelectorAll('.close').forEach(closeButton => {
-            closeButton.addEventListener('click', event => {
-                const modalId = event.target.getAttribute('data-modal');
-                const modal = document.getElementById(modalId);
+        document.querySelectorAll('.close').forEach(item => {
+            item.addEventListener('click', event => {
+                const modal = event.target.closest('.modal');
                 modal.style.display = 'none';
             });
         });
 
-        // Close modals when clicking outside the modal content
-        window.addEventListener('click', event => {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = 'none';
-            }
-        });
-
-        // Set the last modified date and current year in the footer
+        // Set last modified date
         document.getElementById('last-modified').textContent = document.lastModified;
+
+        // Set current year
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>

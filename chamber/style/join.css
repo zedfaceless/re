@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
 header {
     background-color: #1a1a1a; /* Same background color as homepage */
@@ -42,26 +42,28 @@ header nav a:hover {
 
 nav {
     position: relative;
-  }
-    
-  nav ul {
+}
+
+nav ul {
     list-style-type: none;
     display: flex;
     gap: 20px;
-  }
-    
-  nav ul li a {
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
     padding: 10px 15px;
     position: relative;
     font-size: 1.1em;
     transition: all 0.50s ease;
-  }
-  nav ul li a:hover {
+}
+
+nav ul li a:hover {
     color: pink;
-  }
-  nav ul li a::after {
+}
+
+nav ul li a::after {
     content: "";
     position: absolute;
     width: 0;
@@ -70,28 +72,30 @@ nav {
     left: 50%;
     bottom: 0;
     transition: all 0.50s ease;
-  }
-  nav ul li a:hover::after {
-    width: 100%;
-    left: 0;
-  }
-  nav ul li a.active {
-    color: #ffce00;
-  }
-    
-  nav ul li a.active::after {
-    width: 100%;
-    left: 0;
-  }
+}
 
-  .hamburger {
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+nav ul li a.active {
+    color: #ffce00;
+}
+
+nav ul li a.active::after {
+    width: 100%;
+    left: 0;
+}
+
+.hamburger {
     display: none;
     font-size: 24px;
     color: white;
     cursor: pointer;
-  }
+}
 
-  form {
+form {
     border: 3px solid black;
     padding: 20px;
     width: 50%; /* Set width to 50% for a larger form */
@@ -139,64 +143,37 @@ form input[type="submit"]:hover {
     background-color: #45a049;
 }
 
-.membership-cards .card {
-    margin-top: 20px;
-    padding: 15px;
-    border: 2px solid #ccc;
-    font-size: 1.1em; /* Adjust card text size */
-}
-
-
-
-h1 {
-    text-align: center;
-    color: #007BFF; /* Matching the border color for uniformity */
-    margin-bottom: 30px;
-}
-
-form div {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input[type="text"], 
-input[type="email"], 
-input[type="tel"], 
-select, 
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-input[type="submit"] {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 20px;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
 .membership-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 30px;
+}
+
+.membership-cards .card {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    font-size: 1.1em; /* Adjust card text size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Add hover effect to card */
+.membership-cards .card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .card {
@@ -261,28 +238,29 @@ input[type="submit"]:hover {
     text-decoration: none;
     cursor: pointer;
 }
-  footer {
+
+footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
-  }
-    
-  .footer-content {
+}
+
+.footer-content {
     text-align: center;
-  }
-    
-  .footer-content a {
+}
+
+.footer-content a {
     color: #fff;
     text-decoration: underline;
-  }
+}
 
-  .flag {
+.flag {
     width: 30px;
     height: auto;
     margin-top: 10px;
-  }
+}
 
-  @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     body {
         font-size: 14px; /* Smaller base font size for mobile */
     }
