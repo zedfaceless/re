@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover local businesses and opportunities with the Local Chamber of Commerce. Explore member stories, events, and resources in our community.">
+  <title>Chamber of Commerce - Discovery</title>
+  <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style/discovery.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+  <header class="header-container">
+    <img src="image/Local.png" alt="Chamber of Commerce Logo" class="logo">
+    <nav>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul id="nav-list">
+        <li><a href="https://zedfaceless.github.io/wdd231/chamber/index.html">Home</a></li>
+        <li><a href="https://zedfaceless.github.io/wdd231/chamber/about.html">About Us</a></li>
+        <li><a href="https://zedfaceless.github.io/wdd231/chamber/directory.html">Members</a></li>
+        <li><a href="https://zedfaceless.github.io/wdd231/chamber/events.html">Events</a></li>
+        <li><a href="https://zedfaceless.github.io/wdd231/chamber/contact.html">Contact</a></li>
+        <li><a href="https://zedfaceless.github.io/wdd231/chamber/discovery.html">Discovery</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('image/Discovery.webp'); background-size: cover; background-position: center; height: 100vh; color: white; text-align: center; padding: 100px 20px; display: flex; flex-direction: column; justify-content: center;">
+    <div class="hero-text" style="margin-bottom: 50px;">
+      <h1>Discover Local Businesses &amp; Opportunities</h1>
+      <p>Explore new connections, resources, and opportunities to grow your business.</p>
+    </div>
+  </section>
+
+  <!-- Calendar Section -->
+  <div class="wrapper">
+    <div class="container-calendar">
+      <div id="left">
+        <h2>Dynamic Calendar</h2>
+        <div id="event-section">
+          <h3>Add Event</h3>
+          <input type="date" id="eventDate">
+          <input type="text" id="eventTitle" placeholder="Event Title">
+          <input type="text" id="eventDescription" placeholder="Event Description">
+          <button id="addEvent" onclick="addEvent()">Add</button>
+        </div>
+        <div id="reminder-section">
+          <h3>Reminders</h3>
+          <ul id="reminderList">
+            <li data-event-id="1">
+              <strong>Event Title</strong> - Event Description on Event Date
+              <button class="delete-event" onclick="deleteEvent(1)">Delete</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="right">
+        <h3 id="monthAndYear">Month and year</h3>
+        <div class="button-container-calendar">
+          <button id="previous" onclick="previous()">‹</button>
+          <button id="next" onclick="next()">›</button>
+        </div>
+        <table class="table-calendar" id="calendar" data-lang="en">
+          <thead id="thead-month"></thead>
+          <tbody id="calendar-body"></tbody>
+        </table>
+        <div class="footer-container-calendar">
+          <label for="month">Jump To: </label>
+          <select id="month" onchange="jump()">
+            <option value="0">Jan</option>
+            <option value="1">Feb</option>
+            <option value="2">Mar</option>
+            <option value="3">Apr</option>
+            <option value="4">May</option>
+            <option value="5">Jun</option>
+            <option value="6">Jul</option>
+            <option value="7">Aug</option>
+            <option value="8">Sep</option>
+            <option value="9">Oct</option>
+            <option value="10">Nov</option>
+            <option value="11">Dec</option>
+          </select>
+          <select id="year" onchange="jump()"></select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Discoveries Section -->
+  <section class="featured-discoveries">
+    <h2>Featured Discoveries</h2>
+    <p>Uncover the stories behind our most dynamic local businesses and entrepreneurs.</p>
+    <p>Learn about their journey, values, and contributions to the community.</p>
+    <div class="discovery-grid">
+      <article>
+        <img src="image/Shop.webp" alt="Business1">
+        <h3>Local Coffee Roasters</h3>
+        <p>From bean to cup, discover how this local coffee business is thriving and supporting sustainable farming practices.</p>
+      </article>
+      <article>
+        <img src="image/artisan.webp" alt="Business2">
+        <h3>Artisan Crafts Collective</h3>
+        <p>Explore how local artisans have come together to create unique, handmade products.</p>
+      </article>
+      <article>
+        <img src="image/techhub.jfif" alt="Business3">
+        <h3>Tech Innovators Hub</h3>
+        <p>Meet the team behind the city's most exciting tech startup, bringing innovation to the heart of the community.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Resources for Growth Section -->
+  <section class="resources">
+    <h2>Resources for Growth</h2>
+    <p>Take advantage of our collection of resources designed to help your business grow and succeed.</p>
+    <ul>
+      <li><a href="https://www2.fundsforngos.org/tag/philippines/">Grants and Funding Opportunities</a></li>
+      <li><a href="https://www.coursera.org/courses?query=business%20development">Business Development Workshops</a></li>
+      <li><a href="https://www.eventbrite.com/d/philippines--manila/business-networking-events/">Networking Events</a></li>
+      <li><a href="https://www.hubspot.com/resources/branding">Marketing and Branding Resources</a></li>
+    </ul>
+  </section>
+
+  <!-- Weather and Events Section -->
+  <section class="weather-events">
+    <div class="events">
+      <h2>Upcoming Events</h2>
+      <ul id="events-list">
+        <li>October 2024 Youth Worldwide Broadcast - Celebration of Light, 28 Oct 2024, 8:00-9:30AM (GMT+8)</li>
+        <li>Organ Virtuoso Concert with Victoria Shorokhova, 2 Nov 2024, 9:30-11:00AM (GMT+8)</li>
+        <li>Worldwide Devotional for Young Adults, 4 Nov 2024, 9:00-10:30AM</li>
+      </ul>
+    </div>
+  
+    <div class="weather">
+      <h2>Current Weather</h2>
+      <p id="current-weather">Loading weather...</p>
+      <ul id="forecast"></ul>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>Contact Information: <a href="mailto:zedfaces.fernandez@gmail.com">zedfaces.fernandez@gmail.com</a> | +63 961 568 9971</p>
+        <p>Developed by Melchizedek Fernandez for WDD 231</p>
+        <p>Last Updated: <span id="last-modified"></span></p>
+        <p>&copy; <span id="currentYear"></span> Local Chamber of Commerce</p>
+        <img src="image/flag-ph.webp" alt="Philippines Flag" class="flag">
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/discovery.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

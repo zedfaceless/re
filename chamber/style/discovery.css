@@ -1,0 +1,609 @@
+/* Basic styles for the homepage */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+header nav {
+  flex: 1;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #4CAF50;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #1a1a1a;
+  position: relative;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+nav {
+  position: relative;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  position: relative;
+  font-size: 1.1em;
+  transition: all 0.50s ease;
+}
+
+nav ul li a:hover {
+  color: pink;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ffce00;
+  left: 50%;
+  bottom: 0;
+  transition: all 0.50s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+nav ul li a.active {
+  color: #ffce00;
+}
+
+nav ul li a.active::after {
+  width: 100%;
+  left: 0;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+  background-image: url('image/Discovery.webp');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-text {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 20px; /* Padding for spacing */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+  border-radius: 10px; /* Rounded corners for the background */
+}
+
+.hero-text h1 {
+  font-size: 3rem; /* Increased font size for the heading */
+  margin-bottom: 20px; /* Space below the heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for depth */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transition for color and scaling */
+}
+
+.hero-text h1:hover {
+  color: white; /* Change heading color on hover */
+  transform: scale(1.05); /* Scale up the heading slightly on hover */
+}
+
+.hero-text p {
+  font-size: 1.5rem; /* Increased font size for the paragraph */
+  line-height: 1.5; /* Improved line height for readability */
+  margin: 0; /* Remove default margin */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+  transition: color 0.3s ease; /* Transition for color */
+}
+
+.hero-text p:hover {
+  color: white; /* Change paragraph color on hover */
+}
+
+
+.cta-button {
+  background-color: rgba(14, 10, 1, 0.8);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: rgba(223, 19, 114, 0.8);
+}
+
+/* Current Events */
+.events {
+  padding: 20px;
+}
+
+/* Weather section */
+.weather {
+  padding: 20px;
+}
+
+.weather-events {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.events, .weather {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin: 0 10px;
+  min-height: 200px;
+}
+
+.weather-events h2 {
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.weather-events .events,
+.weather-events .weather {
+  width: 48%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weather-events .events:hover,
+.weather-events .weather:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 77, 153, 0.5);
+}
+
+/* Spotlights section */
+.spotlights {
+  border: 3px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spotlight-member {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.spotlights h2 {
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.spotlight-member img {
+  width: 50px;
+  height: auto;
+  display: block;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.flag {
+  width: 30px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 15px auto;
+}
+
+/* Calendar container */
+.container-calendar {
+  background: #ffffff;
+  padding: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Event section styling */
+#event-section {
+  padding: 10px;
+  background: #f5f5f5;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+}
+
+.container-calendar #left h1 {
+  color: #333;
+  text-align: center;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 10px 0;
+}
+
+#event-section h3 {
+  color: rgb(78, 85, 78);
+  font-size: 18px;
+  margin: 0;
+}
+
+#event-section input[type="date"],
+#event-section input[type="text"] {
+  margin: 10px 0;
+  padding: 5px;
+  width: 80%;
+}
+
+#event-section button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+#event-section button:hover {
+  background-color: yellow;
+}
+
+.event-marker {
+  position: relative;
+}
+
+.event-marker::after {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* event tooltip styling */
+.event-tooltip {
+  position: absolute;
+  background-color: rgba(234, 232, 232, 0.763);
+  color: black;
+  padding: 10px;
+  border-radius: 4px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  transition: all 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.event-marker:hover .event-tooltip {
+  display: block;
+}
+
+/* Reminder section styling */
+#reminder-section {
+  padding: 10px;
+  background: #f5f5f5;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+}
+
+#reminder-section h3 {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  margin: 0;
+}
+
+#reminderList {
+  list-style: none;
+  padding: 0;
+}
+
+#reminderList li {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* Style for the delete buttons */
+.delete-event {
+  background: rgb(237, 19, 19);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Buttons in the calendar */
+.button-container-calendar button {
+  cursor: pointer;
+  background: black;
+  color: #fff;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+/* Calendar table */
+.table-calendar {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-calendar td,
+.table-calendar th {
+  padding: 5px;
+  border: 1px solid #e2e2e2;
+  text-align: center;
+  vertical-align: top;
+}
+
+/* Date picker */
+.date-picker.selected {
+  background-color: grey;
+  font-weight: bold;
+  outline: 1px dashed #00BCD4;
+}
+
+.date-picker.selected span {
+  border-bottom: 2px solid currentColor;
+}
+
+/* Day-specific styling */
+.date-picker:nth-child(1) {
+  color: red;
+  /* Sunday */
+}
+
+.date-picker:nth-child(6) {
+  color: green;
+  /* Friday */
+}
+
+/* Hover effect for date cells */
+.date-picker:hover {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+/* Header for month and year */
+#monthAndYear {
+  text-align: center;
+  margin-top: 0;
+}
+
+/* Navigation buttons */
+.button-container-calendar {
+  position: relative;
+  margin-bottom: 1em;
+  overflow: hidden;
+  clear: both;
+}
+
+#previous {
+  float: left;
+}
+
+#next {
+  float: right;
+}
+
+/* Footer styling */
+.footer-container-calendar {
+  margin-top: 1em;
+  border-top: 1px solid #dadada;
+  padding: 10px 0;
+}
+
+.footer-container-calendar select {
+  cursor: pointer;
+  background: #ffffff;
+  color: #585858;
+  border: 1px solid #535d5d;
+  border-radius: 3px;
+  padding: 5px 1em;
+}
+
+
+.header {
+  margin-bottom: 20px; /* Space between header and business sections */
+}
+
+/* Featured Discoveries Section */
+.featured-discoveries {
+  margin: 30px 0; /* Space around the section */
+  text-align: center; /* Center text */
+  padding: 20px; /* Padding around the content */
+  background-color: #f8f8f8; /* Background color for the section */
+  border: 2px solid #ccc; /* Border around the section */
+  border-radius: 8px; /* Rounded corners for the border */
+}
+
+.featured-discoveries h2 {
+  margin-bottom: 20px; /* Space below the headline */
+  color: white; /* Headline color */
+  background-color: #333;
+}
+
+.discovery-grid {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(1, 1fr); /* Two equal columns */
+  gap: 40px; /* Space between grid items */
+}
+
+article {
+  display: flex; /* Use flexbox for each article */
+  align-items: center; /* Center items vertically */
+  border: 1px solid #ccc; /* Optional: border for visual separation */
+  border-radius: 8px; /* Optional: rounded corners */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  transition: transform 0.3s; /* Transition for hover effect */
+}
+
+article:hover {
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
+article img {
+  width: 150px; /* Fixed width for images */
+  height: 150px; /* Fixed height for uniformity */
+  object-fit: cover; /* Crop images to cover area */
+  border-radius: 8px; /* Optional: add rounded corners to images */
+  margin-right: 20px; /* Space between image and text */
+}
+
+article h3 {
+  margin: 10px; /* Remove default margin */
+}
+
+article p {
+  margin: 5px 0 0; /* Margin for paragraph */
+}
+
+.resources {
+  margin: 40px auto; /* Center the section with auto margins */
+  padding: 20px; /* Padding inside the section */
+  max-width: 600px; /* Maximum width for the section */
+  text-align: center; /* Center text inside the section */
+  border: 2px solid #ccc; /* Border around the section */
+  border-radius: 8px; /* Rounded corners for the border */
+  background-color: #f8f8f8; /* Background color for the section */
+}
+
+.resources h2 {
+  margin-bottom: 10px; /* Space below the headline */
+  color: white; /* Headline color */
+  background-color: #333;
+}
+
+.resources p {
+  margin-bottom: 20px; /* Space below the paragraph */
+  color: #555; /* Paragraph color */
+}
+
+.resources ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+.resources ul li {
+  margin: 10px 0; /* Space between list items */
+}
+
+.resources ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #1a1a1a; /* Link color */
+  transition: color 0.3s; /* Transition for hover effect */
+}
+
+.resources ul li a:hover {
+  color: #4CAF50; /* Change link color on hover */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  .events-weather {
+    flex-direction: column;
+  }
+}
