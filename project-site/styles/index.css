@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: lightblue;
+    --secondary-color: teal;
+    --accent1-color: Yellow;
+    --accent2-color: lightgrey;
+  
+    /* change the values below to your chosen font(s) */
+    --heading-font: "IM Fell French Canon SC";
+    --paragraph-font: Lato, Helvetica, sans-serif;
+  
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: black;  /* headlines on a white background */ 
+    --headline-color-on-color: black; /* headlines on a colored background */ 
+    --paragraph-color-on-white: black; /* paragraph text on a white background */ 
+    --paragraph-color-on-color: black; /* paragraph text on a colored background */ 
+    --paragraph-background-color: #55cdd2  ;
+    --nav-link-color: black;
+    --nav-background-color: #55cdd2;
+    --nav-hover-link-color: white;
+    --nav-hover-background-color: #f44708;
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    background-color: lightblue; /* Same background color as homepage */
+    color: black;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow to header */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically centers content inside the header */
+  }
+  
+  header nav {
+    flex: 1; /* Allows the nav to take remaining space */
+  }
+  
+  header nav a {
+    color: black; /* Text color in the navigation */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  header nav a:hover {
+    color: #4CAF50; /* Hover effect for navigation links */
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center; /* Vertically centers content inside the header */
+    padding: 10px;
+    background-color: lightblue; /* Matches your header background */
+    position: relative; /* Makes the container adapt to its content */
+  }
+  
+  .logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintains aspect ratio */
+    margin-right: 20px; /* Adds space between the logo and other elements */
+  }
+  
+  
+  nav {
+    position: relative;
+  }
+    
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+    
+  nav ul li a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+    font-size: 1.1em;
+    transition: all 0.50s ease;
+  }
+  nav ul li a:hover {
+    color: yellow;
+  }
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    left: 50%;
+    bottom: 0;
+    transition: all 0.50s ease;
+  }
+  nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  nav ul li a.active {
+    color: #ffce00;
+  }
+    
+  nav ul li a.active::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+  
+    /* Hero section */
+    .hero {
+        background-image: url('images/Hero.webp'); /* Replace with your image path */
+        background-size: cover; /* Ensures the image covers the section */
+        background-position: center; /* Centers the image */
+        height: 400px; /* Set a height for the hero section */
+        display: flex; /* Use flexbox for layout */
+        align-items: center; /* Center content vertically */
+        padding: 0 20px; /* Padding for the section */
+        color: white; /* Text color */
+      }
+      
+      .hero-content {
+        display: flex; /* Use flexbox for inner content */
+        width: 100%; /* Full width of the hero section */
+      }
+      
+      .hero-text {
+        flex: 1; /* Take available space */
+        text-align: left; /* Align text to the left */
+        display: flex; /* Flexbox for vertical centering */
+        align-items: flex-start; /* Center text vertically */
+        flex-direction: column;
+      }
+
+      .hero-text h1 {
+        font-size: 2.5rem; /* Larger font size for the heading */
+        font-weight: bold; /* Bold font weight */
+        margin: 100px; /* Remove default margin */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+      }
+      
+
+      
+      .cta-button {
+        background-color: orangered; /* Orange background */
+        color: white; /* Text color */
+        padding: 15px 30px; /* Adds padding to the button */
+        border: none; /* Removes default border */
+        border-radius: 5px; /* Rounds the corners */
+        text-decoration: none; /* Removes underline */
+        font-size: 20px; /* Increases font size */
+        align-self: center; /* Center the button vertically */
+        margin-left: 20px; /* Space between text and button */
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+        cursor: pointer; /* Changes cursor to pointer on hover */
+      }
+      
+      .cta-button:hover {
+        background-color: orange; /* Darkens the button on hover */
+        transform: scale(1.05); /* Slightly enlarges button on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow on hover */
+      }
+      
+      
+    .cta-button:active {
+      transform: translateY(1px); /* Moves the button down when clicked */
+      box-shadow: none; /* Removes shadow when clicked */
+      }
+      
+    /* Current Events */
+    .events {
+      padding: 20px;
+    }
+    
+    /* Weather section */
+    .weather {
+      padding: 20px;
+    }
+  
+    .weather-events {
+      display: flex;
+      justify-content: space-between; /* Align items on the left and right */
+      margin: 20px; /* Add margin as needed */
+    }
+    
+    .events, .weather {
+      flex: 1; /* Allow sections to grow equally */
+      padding: 20px; /* Add some padding */
+      box-sizing: border-box; /* Include padding in width calculation */
+      border: 1px solid #ccc; /* Optional: add border for visual separation */
+      margin: 0 10px; /* Optional: space between sections */
+      min-height: 200px; /* Optional: set a minimum height */
+    }
+  
+    .weather-events h2 {
+      background-color: #55cdd2; /* Replace with your header background color */
+      color: black; /* Text color to contrast with the background */
+      padding: 10px 15px; /* Add some padding for spacing */
+      border-radius: 5px; /* Optional: Add rounded corners */
+      margin-bottom: 15px; /* Space below the header */
+      text-align: center; /* Center the header text */
+    }
+  
+    .weather-events .events, 
+  .weather-events .weather {
+    width: 48%; /* Ensure both sections take equal space */
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .weather-events .events:hover, 
+  .weather-events .weather:hover {
+    transform: scale(1.05); /* Slightly enlarge the section */
+    box-shadow: 0 4px 20px rgba(0, 77, 153, 0.5); /* Add a shadow effect */
+  }
+  
+    /* Spotlights section */
+    .spotlights {
+        padding: 20px;
+        background-color: #f9f9f9; /* Optional background color */
+      }
+      
+      #spotlight-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+        gap: 20px; /* Space between items */
+      }
+      
+      .spotlight-member {
+        border: 1px solid #ddd; /* Optional border for the member cards */
+        border-radius: 8px; /* Rounded corners */
+        padding: 15px;
+        text-align: center; /* Center-align text */
+        background-color: #fff; /* Background color for member cards */
+        transition: box-shadow 0.3s; /* Transition for hover effect */
+      }
+      
+      .spotlight-member:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hover effect */
+      }
+
+/*Inspirations*/
+.inspiration {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for friendliness */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px 0;
+    text-align: center; /* Center text */
+  }
+  
+  .inspiration h2 {
+    font-size: 1.8em; /* Larger header */
+    color: #333; /* Darker color for readability */
+    margin-bottom: 20px; /* Space below header */
+  }
+  
+  .inspiration-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to next line */
+  }
+
+  .inspiration-item {
+    background: white; /* White background */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: calc(20% - 20px); /* Adjust to fit in 5 items per row */
+    box-sizing: border-box; /* Ensure padding and borders are included */
+    margin: 10px; /* Margin around items */
+    text-align: left; /* Align text left */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: transform 0.3s; /* Smooth zoom effect */
+    margin-bottom: 20px;
+  }
+  
+
+  .inspiration-item:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+    color: #007bff; /* Change text color on hover */
+  }
+  
+  .inspiration-item img {
+    width: 100%; /* Full width */
+    height: 250px; /* Fixed height for uniformity */
+    object-fit: cover; /* Maintain aspect ratio and cover */
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Space below the image */
+  }
+
+  .inspiration h2{
+    background-color: lightblue;
+  }
+  
+  .inspiration-item p {
+    margin: 0; /* Remove margins */
+    font-size: 0.95em; /* Smaller text */
+    color: #555; /* Darker text */
+  }
+
+  .inspiration-image {
+    width: 250px; /* Fixed width for all images */
+    height: 250px; /* Fixed height for all images */
+    border-radius: 8px;
+  }
+  
+  .inspiration-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  .inspiration-text {
+    margin: 10px 0;
+  }
+
+  .inspiration-item, .inspiration-text {
+    display: grid; /* Use CSS Grid Layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between items */
+    margin: 20px; /* Optional: margin around the grid */
+  }
+  
+  .inspiration-item {
+    position: relative;
+    padding: 20px; /* Increased padding around each item */
+    border: 1px solid #ccc; /* Optional: border around items */
+    border-radius: 8px; /* Optional: rounded corners */
+    background-color: #f9f9f9; /* Optional: light background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+    width: 100%; /* Ensures items take full width of the grid cell */
+    min-height: 300px; /* Set a minimum height for each item */
+  }
+  
+  .inspiration-item img {
+    width: 100%; /* Full width of the item */
+    height: 200px; /* Adjusted height for images */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 8px; /* Optional: rounded corners */
+  }
+  
+  .inspiration-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 20px; /* Space between items */
+  }
+  
+  .inspiration-paragraph {
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Space below the paragraph */
+    font-size: 1.2em; /* Optional: adjust the font size */
+  }
+  
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 8px; /* Rounded corners */
+    animation: zoomIn 0.5s; /* Zoom-in effect */
+  }
+  
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+      
+  /* Footer */
+
+.flag {
+    width: 30px;
+    height: auto;
+    margin-left: 10px; /* Adjusts spacing between text and flag */
+    vertical-align: middle; /* Aligns flag vertically with the text */
+}
+
+/* Social Icons Styles */
+.social-icons {
+    display: flex;
+    justify-content: flex; /* Aligns social icons to the right */
+    gap: 10px; /* Space between icons */
+    margin-top: 10px; /* Space above icons */
+}
+
+.social-icons a {
+    color: gray; /* Default icon color */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+footer {
+    background-color: lightblue;
+    color: black;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between; /* Space out columns */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-content, .footer-links, .quick-guides {
+    flex: 1; /* Allow columns to grow */
+    margin: 0 10px; /* Space between columns */
+}
+
+.footer-links ul, .quick-guides ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.footer-links li, .quick-guides li {
+    margin: 5px 0; /* Space between each link */
+}
+
+.footer-links a, .quick-guides a {
+    color: black; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer-links a:hover, .quick-guides a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+.quick-guides h4 {
+    margin-bottom: 10px; /* Space below the heading */
+    font-size: 1.2rem; /* Adjust heading size */
+}
+
+p {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+}
+
+p span {
+    margin: 0 5px; /* Adds some space around the spans */
+}
+
+.footer-logo {
+    flex: 0 0 150px; /* Fixed width for the logo container */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: left; /* Center the logo horizontally */
+    align-items: left; /* Center the logo vertically */
+  }
+  
+  .footer-logo img {
+    max-width: 30%; /* Ensures the logo is responsive */
+    height: auto; /* Maintains aspect ratio */
+  }
+
+  
+
+
+    /* Responsive adjustments */
+    @media (max-width: 768px)   {
+    
+    .hamburger {
+      display: block;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #333;
+      width: 100%;
+      text-align: center;
+    }
+  
+    nav ul.show {
+      display: flex;
+    }
+  
+    nav ul li {
+      width: 100%;
+    }
+  
+    .events-weather {
+      flex-direction: column; /* Stack the sections on smaller screens */
+    }
+  }
