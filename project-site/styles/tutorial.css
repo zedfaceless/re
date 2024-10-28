@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    background-color: lightblue; /* Same background color as homepage */
+    color: black;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow to header */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically centers content inside the header */
+  }
+  
+  header nav {
+    flex: 1; /* Allows the nav to take remaining space */
+  }
+  
+  header nav a {
+    color: black; /* Text color in the navigation */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  header nav a:hover {
+    color: #4CAF50; /* Hover effect for navigation links */
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center; /* Vertically centers content inside the header */
+    padding: 10px;
+    background-color: lightblue; /* Matches your header background */
+    position: relative; /* Makes the container adapt to its content */
+  }
+  
+  .logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintains aspect ratio */
+    margin-right: 20px; /* Adds space between the logo and other elements */
+  }
+  
+  
+  nav {
+    position: relative;
+  }
+    
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+    
+  nav ul li a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+    font-size: 1.1em;
+    transition: all 0.50s ease;
+  }
+  nav ul li a:hover {
+    color: yellow;
+  }
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    left: 50%;
+    bottom: 0;
+    transition: all 0.50s ease;
+  }
+  nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  nav ul li a.active {
+    color: #ffce00;
+  }
+    
+  nav ul li a.active::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+    background: lightblue;
+    color: #fff;
+}
+
+nav a {
+    color: #ddd;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.video-gallery {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin: 30px;
+}
+
+.video-item {
+    width: 100%; /* Make the item full width */
+    max-width: 800px; /* Set a maximum width for larger screens */
+    margin: 10px 0; /* Space between video items */
+    border: 1px solid #ccc; /* Add a border around video items */
+    border-radius: 8px; /* Round the corners */
+    overflow: hidden; /* Ensure overflow is hidden */
+    background-color: #f9f9f9; /* Light background for better visibility */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    text-align: center; /* Center text in the item */
+    padding: 10px;
+}
+
+.video-item iframe {
+    width: 100%; /* Make the iframe take full width of the parent */
+    height: 450px; /* Maintain aspect ratio */
+    max-height: 450px; /* Limit height to maintain aspect ratio */
+}
+
+.video-caption {
+    font-size: 1.2em; /* Larger font size for captions */
+    font-weight: bold; /* Bold captions */
+    color: #333; /* Dark color for readability */
+    margin: 20px 0; /* Margin around captions */
+    margin-left: 40px;
+    text-align: left;
+}
+
+.extra-tips {
+    padding: 10px; /* Add padding for extra tips */
+    font-size: 0.9em; /* Smaller font size for tips */
+    color: #666; /* Gray color for tips */
+}
+
+
+.video-item:hover {
+    transform: scale(1.03);
+}
+
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+}
+
+
+  .flag {
+    width: 30px;
+    height: auto;
+    margin-left: 10px; /* Adjusts spacing between text and flag */
+    vertical-align: middle; /* Aligns flag vertically with the text */
+}
+
+/* Social Icons Styles */
+.social-icons {
+    display: flex;
+    justify-content: flex; /* Aligns social icons to the right */
+    gap: 10px; /* Space between icons */
+    margin-top: 10px; /* Space above icons */
+}
+
+.social-icons a {
+    color: gray; /* Default icon color */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+footer {
+    background-color: lightblue;
+    color: black;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between; /* Space out columns */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-content, .footer-links, .quick-guides {
+    flex: 1; /* Allow columns to grow */
+    margin: 0 10px; /* Space between columns */
+}
+
+.footer-links ul, .quick-guides ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.footer-links li, .quick-guides li {
+    margin: 5px 0; /* Space between each link */
+}
+
+.footer-links a, .quick-guides a {
+    color: black; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer-links a:hover, .quick-guides a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+.quick-guides h4 {
+    margin-bottom: 10px; /* Space below the heading */
+    font-size: 1.2rem; /* Adjust heading size */
+}
+
+p {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+}
+
+p span {
+    margin: 0 5px; /* Adds some space around the spans */
+}
+
+.footer-logo {
+    flex: 0 0 150px; /* Fixed width for the logo container */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: left; /* Center the logo horizontally */
+    align-items: left; /* Center the logo vertically */
+  }
+  
+  .footer-logo img {
+    max-width: 30%; /* Ensures the logo is responsive */
+    height: auto; /* Maintains aspect ratio */
+  }

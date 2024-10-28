@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to the Local Chamber of Commerce. Join us t
+  
+  <!-- Author Meta Tag -->
+  <meta name="author" content="Melchizedek Fernandez">
+  
+  <title>Video Tutorial</title>
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Chamber of Commerce - Home">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="image/Local.png"> 
+  <meta property="og:url" content="https://zedfaceless.github.io/wdd231/chamber/index.html">
+  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+  <link rel="icon" href="images/android-chrome-192x192.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles/tutorial.css">
+</head>
+<body>
+  <header>
+    <a href="project-site/index.html">
+      <img src="images/logo.png" alt="Fixed" class="logo">
+  </a>
+    <nav>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul id="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guide.html">How-To Guide</a></li>
+        <li><a href="tutorial.html">Video Tutorial</a></li>
+        <li><a href="">FAQs</a></li>
+        <li><a href="">Community Forum</a></li>
+        <li><a href="">Discover</a></li>
+      </ul>
+    </nav>
+    </header>
+    <main id="content">
+        <section id="videos" class="video-gallery">
+            <!-- Video 1: Using a Torque Wrench Correctly -->
+            <article class="video-item">
+                <h3>Using a Torque Wrench Correctly</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3v3hLvuO_KU" title="Torque Wrench Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Learn the correct way to use a torque wrench for precise bolt tightening.</p>
+                <button onclick="toggleDetails('tip1')">Show Tips</button>
+                <div id="tip1" class="extra-tips hidden">
+                    <p>Tip: Always reset the wrench to zero after use to maintain accuracy.</p>
+                </div>
+            </article>
+        
+            <!-- Video 2: Using a Jack Safely -->
+            <article class="video-item">
+                <h3>Using a Jack Safely</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/eH1FEEQtCsU" title="Jack Safety Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Follow these steps to safely lift your vehicle using a jack.</p>
+                <button onclick="toggleDetails('tip2')">Show Tips</button>
+                <div id="tip2" class="extra-tips hidden">
+                    <p>Tip: Place jack stands as a backup for added safety.</p>
+                </div>
+            </article>
+        
+            <!-- Video 3: Using a Multimeter -->
+            <article class="video-item">
+                <h3>Using a Multimeter</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/omQiFV1CRl8" title="Multimeter Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Test voltage and continuity with a multimeter.</p>
+                <button onclick="toggleDetails('tip3')">Show Tips</button>
+                <div id="tip3" class="extra-tips hidden">
+                    <p>Tip: Always start with the highest setting when testing voltage.</p>
+                </div>
+            </article>
+        
+            <!-- Video 4: How to Use a Car Diagnostic Tool -->
+            <article class="video-item">
+                <h3>How to Use a Car Diagnostic Tool</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/c0ROgxC8rns" title="Diagnostic Tool Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Scan and diagnose issues with your car using a diagnostic tool.</p>
+                <button onclick="toggleDetails('tip4')">Show Tips</button>
+                <div id="tip4" class="extra-tips hidden">
+                    <p>Tip: Clear any error codes after repairs to confirm they’re fixed.</p>
+                </div>
+            </article>
+        
+            <!-- Video 5: How to Use a Battery Tester -->
+            <article class="video-item">
+                <h3>How to Use a Battery Tester</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yP4I7PbR9KY" title="Battery Tester Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Determine if your car battery is in good condition.</p>
+                <button onclick="toggleDetails('tip5')">Show Tips</button>
+                <div id="tip5" class="extra-tips hidden">
+                    <p>Tip: Test the battery with the engine off to avoid alternator effects.</p>
+                </div>
+            </article>
+        
+            <!-- Video 6: Using an OBD-II Scanner -->
+            <article class="video-item">
+                <h3>Using an OBD-II Scanner</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/U2fygPCavq0" title="OBD-II Scanner Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Connect and read error codes with an OBD-II scanner.</p>
+                <button onclick="toggleDetails('tip6')">Show Tips</button>
+                <div id="tip6" class="extra-tips hidden">
+                    <p>Tip: Write down any codes before resetting to track recurring issues.</p>
+                </div>
+            </article>
+        
+            <!-- Video 7: Using a Brake Bleeder Kit -->
+            <article class="video-item">
+                <h3>Using a Brake Bleeder Kit</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NUhOpYKmnYc" title="Brake Bleeder Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Bleed your brakes to remove air bubbles and ensure smooth braking.</p>
+                <button onclick="toggleDetails('tip7')">Show Tips</button>
+                <div id="tip7" class="extra-tips hidden">
+                    <p>Tip: Start from the furthest wheel and work towards the closest.</p>
+                </div>
+            </article>
+        </section>        
+    </main>
+
+    <footer>
+        <div class="container">
+          <!-- Left Column: Contact Information -->
+          <div class="footer-content">
+            <div class="contact-info">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="logo">
+                  </div>
+              <p>Contact Info: <a href="mailto:zedfaces.fernandez@gmail.com">zedfaces.fernandez@gmail.com</a></p>
+              <p>
+                Developed by Zed Fernandez
+                <img src="images/flag-ph.webp" alt="Philippines Flag" class="flag">
+              </p>
+              <p>Last Updated: <span id="last-modified"></span> &copy; <span id="year"></span> FIXED</p>
+            </div>
+          </div>
+      
+          <!-- Middle Column: Navigation -->
+          <div class="footer-links">
+            <h4>Navigations</h4>
+            <ul>
+              <li><a href="project-site/index.html">Home</a></li>
+              <li><a href="project-site/index.html">How-To Guide</a></li>
+              <li><a href="project-site/index.html">Video Tutorial</a></li>
+              <li><a href="project-site/index.html">FAQs</a></li>
+              <li><a href="project-site/index.html">Community Forum</a></li>
+              <li><a href="project-site/index.html">Discover</a></li>
+            </ul>
+          </div>
+      
+          <!-- Right Column: Quick Guides -->
+          <div class="quick-guides">
+            <h4>Quick Guides:</h4>
+            <ul>
+              <li><a href="https://www.caranddriver.com/features/a27169631/how-to-change-oil-in-car/">How to Change Oil</a></li>
+              <li><a href="https://haynes.com/en-us/tips-tutorials/how-test-car-battery-multimeter">How to Check Battery Voltage</a>
+              <li><a href="https://automart.ph/blog/how-to-change-the-engine-air-filter">How to Replace Air Filter</a></li>
+              <li><a href="https://nubrakes.com/blog/brake-pad-replacement/">How to Change Brake Pads</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+            <i class='bx bxl-facebook-circle'></i>
+          </a>
+          <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+            <i class='bx bxl-tiktok'></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <i class='bx bxl-instagram-alt'></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+            <i class='bx bxl-twitter'></i>
+          </a>
+        </div>
+      </footer>
+      
+      <script src="script/tutorial.js"></script>
+    </body>
+    </html>
+    
