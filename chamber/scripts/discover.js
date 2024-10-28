@@ -1,4 +1,4 @@
-// Configuration for API
+// Weather API Configuration
 const config = {
     apiKey: 'e269d26025c33befe2d34e3539a41960',
     city: 'Manila,PH'
@@ -17,7 +17,8 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${config.city}&appid=${
         const weatherDescription = data.weather.map(event =>
             event.description.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
         ).join(', ');
-        document.getElementById('current-weather').textContent = `${currentTemp}°C, ${weatherDescription}`;
+        const weatherIcon = data.weather[0].icon; // Get weather icon code
+        document.getElementById('current-weather').innerHTML = `${currentTemp}°C, ${weatherDescription} <img src="https://openweathermap.org/img/wn/${weatherIcon}@2x.png" alt="${weatherDescription}">`;
         const { lat, lon } = data.coord;
         return fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${config.apiKey}&units=metric`);
     })
@@ -36,8 +37,9 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${config.city}&appid=${
             const forecastDescription = forecast.weather.map(event =>
                 event.description.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
             ).join(', ');
+            const forecastIcon = forecast.weather[0].icon; // Get forecast icon code
             const li = document.createElement('li');
-            li.textContent = `Day ${i + 1}: ${forecastTemp}°C, ${forecastDescription}`;
+            li.innerHTML = `Day ${i + 1}: ${forecastTemp}°C, ${forecastDescription} <img src="https://openweathermap.org/img/wn/${forecastIcon}@2x.png" alt="${forecastDescription}">`;
             forecastList.appendChild(li);
         }
         document.getElementById('forecast').appendChild(forecastList);
@@ -46,6 +48,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${config.city}&appid=${
         console.error('Error fetching weather data:', error);
         document.getElementById('current-weather').textContent = 'Unable to load weather data';
     });
+
 // Initialize calendar variables
 let currentDate = new Date();
 let currentMonth = currentDate.getMonth();
@@ -171,33 +174,28 @@ function deleteEvent(eventId) {
 // Display reminders function
 function displayReminders() {
     const reminderList = document.getElementById("reminderList");
-    reminderList.innerHTML = "";
-    for (let i = 0; i < events.length; i++) {
-        let event = events[i];
-        let eventDate = new Date(event.date);
-        if (eventDate.getMonth() === currentMonth && eventDate.getFullYear() === currentYear) {
-            let listItem = document.createElement("li");
-            listItem.innerHTML = `<strong>${event.title}</strong> - ${event.description} on ${eventDate.toLocaleDateString()}`;
+    reminderList.innerHTML = ""; // Clear existing reminders
 
-            // Add a delete button for each reminder item
-            let deleteButton = document.createElement("button");
-            deleteButton.className = "delete-event";
-            deleteButton.textContent = "Delete";
-            deleteButton.onclick = function () {
-                deleteEvent(event.id);
-            };
-
-            listItem.appendChild(deleteButton);
-            reminderList.appendChild(listItem);
-        }
-    }
+    events.forEach(event => {
+        const eventDate = new Date(event.date);
+        const formattedDate = `${eventDate.getDate()}/${eventDate.getMonth() + 1}/${eventDate.getFullYear()}`;
+        const li = document.createElement("li");
+        li.setAttribute("data-event-id", event.id);
+        li.innerHTML = `<strong>${event.title}</strong> - ${event.description} on ${formattedDate}
+                        <button class="delete-event" onclick="deleteEvent(${event.id})">Delete</button>`;
+        reminderList.appendChild(li);
+    });
 }
+
+// Jump to selected month and year
+function jump() {
+    currentMonth = parseInt(monthSelect.value);
+    currentYear = parseInt(yearSelect.value);
+    showCalendar(currentMonth, currentYear);
+}
+
 // Initialize calendar on page load
 document.addEventListener("DOMContentLoaded", () => {
     showCalendar(currentMonth, currentYear);
     document.getElementById('add-event-button').addEventListener('click', addEvent);
-
-    // Display the last modified date
-    const lastModifiedDate = document.lastModified ? new Date(document.lastModified).toLocaleDateString() : 'N/A';
-    document.getElementById('last-modified').textContent = lastModifiedDate;
 });

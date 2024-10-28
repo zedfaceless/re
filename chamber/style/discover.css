@@ -241,6 +241,25 @@ nav ul li a.active::after {
   display: block;
 }
 
+.resource-image {
+  width: 100%; /* Adjust the width as needed */
+  max-width: 600px; /* Maximum width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Centering the image */
+  margin: 20px auto; /* Add spacing above and below, center the image */
+  border-radius: 8px; /* Optional: add rounded corners */
+}
+
+.resources-image,
+.upcoming-events-image {
+  width: 100%; /* Adjust as necessary */
+  max-width: 600px; /* Set a max width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Center the image */
+  margin: 20px auto; /* Add some space around the image */
+}
+
+
 /* Footer */
 footer {
   background-color: #333;

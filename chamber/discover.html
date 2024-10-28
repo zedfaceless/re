@@ -3,14 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Melchizedek Fernandez">
   <meta name="description" content="Discover local businesses and opportunities with the Local Chamber of Commerce. Explore member stories, events, and resources in our community.">
+  
+  <!-- Open Graph (OG) meta tags for social media preview -->
+  <meta property="og:title" content="Chamber of Commerce - Discovery">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="image/og-image.png"> <!-- Ensure the image path is correct -->
+  <meta property="og:url" content="https://zedfaceless.github.io/wdd231/chamber/discover.html">
+
   <title>Chamber of Commerce - Discovery</title>
   <link rel="icon" href="image/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style/discovery.css"> <!-- Link to your CSS file -->
+
+  <!-- CSS Reset (optional, but recommended for cross-browser consistency) -->
+  <link rel="stylesheet" href="style/normalize.css"> <!-- Ensure normalize.css exists in your project -->
+  <link rel="stylesheet" href="style/discover.css"> <!-- Link to your custom CSS file -->
 </head>
 <body>
   <header class="header-container">
-    <img src="image/Local.png" alt="Chamber of Commerce Logo" class="logo">
+    <a href="https://zedfaceless.github.io/wdd231/chamber/index.html">
+      <img src="image/Local.png" alt="Chamber of Commerce Logo" class="logo">
+    </a>
     <nav>
       <div class="hamburger" onclick="toggleMenu()">☰</div>
       <ul id="nav-list">
@@ -23,14 +36,15 @@
       </ul>
     </nav>
   </header>
-  
-  <!-- Hero Section -->
-  <section class="hero" style="background-image: url('image/Discovery.webp'); background-size: cover; background-position: center; height: 100vh; color: white; text-align: center; padding: 100px 20px; display: flex; flex-direction: column; justify-content: center;">
-    <div class="hero-text" style="margin-bottom: 50px;">
-      <h1>Discover Local Businesses &amp; Opportunities</h1>
-      <p>Explore new connections, resources, and opportunities to grow your business.</p>
-    </div>
-  </section>
+
+   <!-- Hero Section -->
+<section class="hero" style="background-image: url('image/Discovery.webp'); background-size: cover; background-position: center; height: 100vh; color: white; text-align: center; padding: 100px 20px; display: flex; flex-direction: column; justify-content: center;">
+  <div class="hero-text" style="margin-bottom: 50px;">
+    <h1>Discover Local Businesses &amp; Opportunities</h1>
+    <p>Explore new connections, resources, and opportunities to grow your business.</p>
+  </div>
+</section>
+
 
   <!-- Calendar Section -->
   <div class="wrapper">
@@ -39,29 +53,26 @@
         <h2>Dynamic Calendar</h2>
         <div id="event-section">
           <h3>Add Event</h3>
-          <input type="date" id="eventDate">
+          <input type="date" id="eventDate" placeholder="Event Date">
           <input type="text" id="eventTitle" placeholder="Event Title">
-          <input type="text" id="eventDescription" placeholder="Event Description">
-          <button id="addEvent" onclick="addEvent()">Add</button>
+          <textarea id="eventDescription" placeholder="Event Description"></textarea>
+          <button id="add-event-button" onclick="addEvent()">Add Event</button>
         </div>
         <div id="reminder-section">
           <h3>Reminders</h3>
-          <ul id="reminderList">
-            <li data-event-id="1">
-              <strong>Event Title</strong> - Event Description on Event Date
-              <button class="delete-event" onclick="deleteEvent(1)">Delete</button>
-            </li>
-          </ul>
+          <ul id="reminderList"></ul>
         </div>
       </div>
       <div id="right">
-        <h3 id="monthAndYear">Month and year</h3>
+        <h3 id="monthAndYear">Month and Year</h3>
         <div class="button-container-calendar">
           <button id="previous" onclick="previous()">‹</button>
           <button id="next" onclick="next()">›</button>
         </div>
         <table class="table-calendar" id="calendar" data-lang="en">
-          <thead id="thead-month"></thead>
+          <thead>
+            <tr id="thead-month"></tr>
+          </thead>
           <tbody id="calendar-body"></tbody>
         </table>
         <div class="footer-container-calendar">
@@ -82,15 +93,16 @@
           </select>
           <select id="year" onchange="jump()"></select>
         </div>
+        <p>Last modified: <span id="last-modified"></span></p>
       </div>
     </div>
   </div>
+ 
 
   <!-- Featured Discoveries Section -->
   <section class="featured-discoveries">
     <h2>Featured Discoveries</h2>
     <p>Uncover the stories behind our most dynamic local businesses and entrepreneurs.</p>
-    <p>Learn about their journey, values, and contributions to the community.</p>
     <div class="discovery-grid">
       <article>
         <img src="image/Shop.webp" alt="Business1">
@@ -110,17 +122,19 @@
     </div>
   </section>
 
-  <!-- Resources for Growth Section -->
-  <section class="resources">
-    <h2>Resources for Growth</h2>
-    <p>Take advantage of our collection of resources designed to help your business grow and succeed.</p>
-    <ul>
+   <!-- Resources for Growth Section -->
+<section class="resources">
+  <h2>Resources for Growth</h2>
+  <p>Take advantage of our collection of resources designed to help your business grow and succeed.</p>
+  <!-- Add the image here -->
+  <img src="image/growth.webp" alt="Resource Growth" class="resource-image" />
+  <ul>
       <li><a href="https://www2.fundsforngos.org/tag/philippines/">Grants and Funding Opportunities</a></li>
       <li><a href="https://www.coursera.org/courses?query=business%20development">Business Development Workshops</a></li>
       <li><a href="https://www.eventbrite.com/d/philippines--manila/business-networking-events/">Networking Events</a></li>
       <li><a href="https://www.hubspot.com/resources/branding">Marketing and Branding Resources</a></li>
-    </ul>
-  </section>
+  </ul>
+</section>
 
   <!-- Weather and Events Section -->
   <section class="weather-events">
@@ -131,6 +145,7 @@
         <li>Organ Virtuoso Concert with Victoria Shorokhova, 2 Nov 2024, 9:30-11:00AM (GMT+8)</li>
         <li>Worldwide Devotional for Young Adults, 4 Nov 2024, 9:00-10:30AM</li>
       </ul>
+      <img src="image/events.webp" alt="Resources for Growth" class="resources-image">
     </div>
   
     <div class="weather">
@@ -153,6 +168,6 @@
     </div>
   </footer>
 
-  <script src="scripts/discovery.js"></script> <!-- Link to your JavaScript file -->
+  <script src="scripts/discover.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>
