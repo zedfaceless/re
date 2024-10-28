@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Welcome to the Local Chamber of Commerce. Join us t
+  <meta name="description" content="Welcome to the Local Chamber of Commerce. Join us to..."> <!-- Ensure this is complete -->
   
   <!-- Author Meta Tag -->
   <meta name="author" content="Melchizedek Fernandez">
@@ -15,6 +15,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="image/Local.png"> 
   <meta property="og:url" content="https://zedfaceless.github.io/wdd231/chamber/index.html">
+  
   <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
   <link rel="icon" href="images/android-chrome-192x192.png" type="image/x-icon">
   <link rel="stylesheet" href="styles/faqs.css">
@@ -23,7 +24,7 @@
   <header>
     <a href="index.html">
       <img src="images/logo.png" alt="Fixed" class="logo">
-  </a>
+    </a>
     <nav>
       <div class="hamburger" onclick="toggleMenu()">☰</div>
       <ul id="nav-list">
@@ -35,103 +36,104 @@
         <li><a href="https://zedfaceless.github.io/wdd231/project-site/discover.html">Discover</a></li>
       </ul>
     </nav>
-    </header>
-    <main class="faq-container">
-        <article class="faq-item">
-            <h2 class="faq-question" onclick="toggleDetails('faq1')">What is automotive DIY?</h2>
-            <div id="faq1" class="faq-answer hidden">
-                <p>Automotive DIY refers to the practice of performing repairs and maintenance on your vehicle by yourself rather than relying on professional mechanics.</p>
-            </div>
-        </article>
+  </header>
+  
+  <main class="faq-container">
+    <article class="faq-item">
+      <h2 class="faq-question" onclick="toggleDetails('faq1')">What is automotive DIY?</h2>
+      <div id="faq1" class="faq-answer hidden">
+        <p>Automotive DIY refers to the practice of performing repairs and maintenance on your vehicle by yourself rather than relying on professional mechanics.</p>
+      </div>
+    </article>
 
-        <article class="faq-item">
-            <h2 class="faq-question" onclick="toggleDetails('faq2')">How can I learn to repair my car?</h2>
-            <div id="faq2" class="faq-answer hidden">
-                <p>You can learn through online tutorials, workshops, manuals, and hands-on practice. Our website offers various resources to help you get started.</p>
-            </div>
-        </article>
+    <article class="faq-item">
+      <h2 class="faq-question" onclick="toggleDetails('faq2')">How can I learn to repair my car?</h2>
+      <div id="faq2" class="faq-answer hidden">
+        <p>You can learn through online tutorials, workshops, manuals, and hands-on practice. Our website offers various resources to help you get started.</p>
+      </div>
+    </article>
 
-        <article class="faq-item">
-            <h2 class="faq-question" onclick="toggleDetails('faq3')">What tools do I need for basic car maintenance?</h2>
-            <div id="faq3" class="faq-answer hidden">
-                <p>Basic tools include a socket set, wrenches, screwdrivers, pliers, a jack, and a torque wrench. Specific tools depend on the type of maintenance or repair.</p>
-            </div>
-        </article>
+    <article class="faq-item">
+      <h2 class="faq-question" onclick="toggleDetails('faq3')">What tools do I need for basic car maintenance?</h2>
+      <div id="faq3" class="faq-answer hidden">
+        <p>Basic tools include a socket set, wrenches, screwdrivers, pliers, a jack, and a torque wrench. Specific tools depend on the type of maintenance or repair.</p>
+      </div>
+    </article>
 
-        <article class="faq-item">
-            <h2 class="faq-question" onclick="toggleDetails('faq4')">Is it safe to perform DIY repairs?</h2>
-            <div id="faq4" class="faq-answer hidden">
-                <p>Yes, as long as you follow safety guidelines, use the right tools, and have a clear understanding of the repairs you're undertaking. Always consult manuals or guides.</p>
-            </div>
-        </article>
+    <article class="faq-item">
+      <h2 class="faq-question" onclick="toggleDetails('faq4')">Is it safe to perform DIY repairs?</h2>
+      <div id="faq4" class="faq-answer hidden">
+        <p>Yes, as long as you follow safety guidelines, use the right tools, and have a clear understanding of the repairs you're undertaking. Always consult manuals or guides.</p>
+      </div>
+    </article>
 
-        <article class="faq-item">
-            <h2 class="faq-question" onclick="toggleDetails('faq5')">Where can I find reliable repair guides?</h2>
-            <div id="faq5" class="faq-answer hidden">
-                <p>You can find reliable guides on our website, YouTube, and automotive forums. Many manuals and tutorials are available for specific car models.</p>
-            </div>
-        </article>
-    </main>
-    <footer>
-        <div class="container">
-          <!-- Left Column: Contact Information -->
-          <div class="footer-content">
-            <div class="contact-info">
-                <div class="footer-logo">
-                    <img src="images/logo.png" alt="logo">
-                  </div>
-              <p>Contact Info: <a href="mailto:zedfaces.fernandez@gmail.com">zedfaces.fernandez@gmail.com</a></p>
-              <p>
-                Developed by Zed Fernandez
-                <img src="images/flag-ph.webp" alt="Philippines Flag" class="flag">
-              </p>
-              <p>Last Updated: <span id="last-modified"></span> &copy; <span id="year"></span> FIXED</p>
-            </div>
+    <article class="faq-item">
+      <h2 class="faq-question" onclick="toggleDetails('faq5')">Where can I find reliable repair guides?</h2>
+      <div id="faq5" class="faq-answer hidden">
+        <p>You can find reliable guides on our website, YouTube, and automotive forums. Many manuals and tutorials are available for specific car models.</p>
+      </div>
+    </article>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <!-- Left Column: Contact Information -->
+      <div class="footer-content">
+        <div class="contact-info">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="logo">
           </div>
-      
-          <!-- Middle Column: Navigation -->
-          <div class="footer-links">
-            <h4>Navigations</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="guide.html">How-To Guide</a></li>
-                <li><a href="tutorial.html">Video Tutorial</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="forum.html">Community Forum</a></li>
-                <li><a href="discover.html">Discover</a></li>
-            </ul>
-          </div>
-      
-          <!-- Right Column: Quick Guides -->
-          <div class="quick-guides">
-            <h4>Quick Guides:</h4>
-            <ul>
-              <li><a href="https://www.caranddriver.com/features/a27169631/how-to-change-oil-in-car/">How to Change Oil</a></li>
-              <li><a href="https://haynes.com/en-us/tips-tutorials/how-test-car-battery-multimeter">How to Check Battery Voltage</a>
-              <li><a href="https://automart.ph/blog/how-to-change-the-engine-air-filter">How to Replace Air Filter</a></li>
-              <li><a href="https://nubrakes.com/blog/brake-pad-replacement/">How to Change Brake Pads</a></li>
-            </ul>
-          </div>
+          <p>Contact Info: <a href="mailto:zedfaces.fernandez@gmail.com">zedfaces.fernandez@gmail.com</a></p>
+          <p>
+            Developed by Zed Fernandez
+            <img src="images/flag-ph.webp" alt="Philippines Flag" class="flag">
+          </p>
+          <p>Last Updated: <span id="last-modified"></span> &copy; <span id="year"></span> FIXED</p>
         </div>
-      
-        <!-- Social Media Icons -->
-        <div class="social-icons">
-          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-            <i class='bx bxl-facebook-circle'></i>
-          </a>
-          <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
-            <i class='bx bxl-tiktok'></i>
-          </a>
-          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-            <i class='bx bxl-instagram-alt'></i>
-          </a>
-          <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
-            <i class='bx bxl-twitter'></i>
-          </a>
-        </div>
-      </footer>
-      
-      <script src="script/guide.js"></script>
-    </body>
-    </html>
-    
+      </div>
+
+      <!-- Middle Column: Navigation -->
+      <div class="footer-links">
+        <h4>Navigations</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="guide.html">How-To Guide</a></li>
+          <li><a href="tutorial.html">Video Tutorial</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="forum.html">Community Forum</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Column: Quick Guides -->
+      <div class="quick-guides">
+        <h4>Quick Guides:</h4>
+        <ul>
+          <li><a href="https://www.caranddriver.com/features/a27169631/how-to-change-oil-in-car/">How to Change Oil</a></li>
+          <li><a href="https://haynes.com/en-us/tips-tutorials/how-test-car-battery-multimeter">How to Check Battery Voltage</a></li>
+          <li><a href="https://automart.ph/blog/how-to-change-the-engine-air-filter">How to Replace Air Filter</a></li>
+          <li><a href="https://nubrakes.com/blog/brake-pad-replacement/">How to Change Brake Pads</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+        <i class='bx bxl-facebook-circle'></i>
+      </a>
+      <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+        <i class='bx bxl-tiktok'></i>
+      </a>
+      <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+        <i class='bx bxl-instagram-alt'></i>
+      </a>
+      <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+        <i class='bx bxl-twitter'></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script/guide.js"></script>
+</body>
+</html>
