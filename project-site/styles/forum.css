@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    background-color: lightblue; /* Same background color as homepage */
+    color: black;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow to header */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically centers content inside the header */
+  }
+  
+  header nav {
+    flex: 1; /* Allows the nav to take remaining space */
+  }
+  
+  header nav a {
+    color: black; /* Text color in the navigation */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  header nav a:hover {
+    color: #4CAF50; /* Hover effect for navigation links */
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center; /* Vertically centers content inside the header */
+    padding: 10px;
+    background-color: lightblue; /* Matches your header background */
+    position: relative; /* Makes the container adapt to its content */
+  }
+  
+  .logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintains aspect ratio */
+    margin-right: 20px; /* Adds space between the logo and other elements */
+  }
+  
+  
+  nav {
+    position: relative;
+  }
+    
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+    
+  nav ul li a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+    font-size: 1.1em;
+    transition: all 0.50s ease;
+  }
+  nav ul li a:hover {
+    color: yellow;
+  }
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    left: 50%;
+    bottom: 0;
+    transition: all 0.50s ease;
+  }
+  nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  nav ul li a.active {
+    color: #ffce00;
+  }
+    
+  nav ul li a.active::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .forum-container {
+    margin: 20px;
+}
+
+.post-form {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.post-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.post-form button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-form button:hover {
+    background-color: #218838; /* Darker shade on hover */
+}
+
+.posts {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 15px;
+}
+
+.post {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.post:last-child {
+    border-bottom: none; /* Remove border for last post */
+}
+
+
+footer {
+    background-color: lightblue;
+    color: black;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between; /* Space out columns */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-content, .footer-links, .quick-guides {
+    flex: 1; /* Allow columns to grow */
+    margin: 0 10px; /* Space between columns */
+}
+
+.footer-links ul, .quick-guides ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.footer-links li, .quick-guides li {
+    margin: 5px 0; /* Space between each link */
+}
+
+.footer-links a, .quick-guides a {
+    color: black; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer-links a:hover, .quick-guides a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+.quick-guides h4 {
+    margin-bottom: 10px; /* Space below the heading */
+    font-size: 1.2rem; /* Adjust heading size */
+}
+
+p {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+}
+
+p span {
+    margin: 0 5px; /* Adds some space around the spans */
+}
+
+.footer-logo {
+    flex: 0 0 150px; /* Fixed width for the logo container */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: left; /* Center the logo horizontally */
+    align-items: left; /* Center the logo vertically */
+  }
+  
+  .footer-logo img {
+    max-width: 30%; /* Ensures the logo is responsive */
+    height: auto; /* Maintains aspect ratio */
+  }

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to the Local Chamber of Commerce. Join us t
+  
+  <!-- Author Meta Tag -->
+  <meta name="author" content="Melchizedek Fernandez">
+  
+  <title>Registration</title>
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Chamber of Commerce - Home">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="image/Local.png"> 
+  <meta property="og:url" content="https://zedfaceless.github.io/wdd231/chamber/index.html">
+  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+  <link rel="icon" href="images/android-chrome-192x192.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles/learn.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <img src="images/logo.png" alt="Fixed" class="logo">
+  </a>
+    <nav>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul id="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guide.html">How-To Guide</a></li>
+        <li><a href="tutorial.html">Video Tutorial</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="forum.html">Community Forum</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+    </header>
+    <main class="registration-container">
+        <form id="registrationForm" onsubmit="submitForm(event)">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <p id="message" class="hidden"></p>
+    </main>
+
+    <footer>
+        <div class="container">
+          <!-- Left Column: Contact Information -->
+          <div class="footer-content">
+            <div class="contact-info">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="logo">
+                  </div>
+              <p>Contact Info: <a href="mailto:zedfaces.fernandez@gmail.com">zedfaces.fernandez@gmail.com</a></p>
+              <p>
+                Developed by Zed Fernandez
+                <img src="images/flag-ph.webp" alt="Philippines Flag" class="flag">
+              </p>
+              <p>Last Updated: <span id="last-modified"></span> &copy; <span id="year"></span> FIXED</p>
+            </div>
+          </div>
+      
+          <!-- Middle Column: Navigation -->
+          <div class="footer-links">
+            <h4>Navigations</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="guide.html">How-To Guide</a></li>
+                <li><a href="tutorial.html">Video Tutorial</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="forum.html">Community Forum</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+          </div>
+      
+          <!-- Right Column: Quick Guides -->
+          <div class="quick-guides">
+            <h4>Quick Guides:</h4>
+            <ul>
+              <li><a href="https://www.caranddriver.com/features/a27169631/how-to-change-oil-in-car/">How to Change Oil</a></li>
+              <li><a href="https://haynes.com/en-us/tips-tutorials/how-test-car-battery-multimeter">How to Check Battery Voltage</a>
+              <li><a href="https://automart.ph/blog/how-to-change-the-engine-air-filter">How to Replace Air Filter</a></li>
+              <li><a href="https://nubrakes.com/blog/brake-pad-replacement/">How to Change Brake Pads</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+            <i class='bx bxl-facebook-circle'></i>
+          </a>
+          <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+            <i class='bx bxl-tiktok'></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <i class='bx bxl-instagram-alt'></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+            <i class='bx bxl-twitter'></i>
+          </a>
+        </div>
+      </footer>
+      
+      <script src="script/learn.js"></script>
+    </body>
+    </html>
+    
