@@ -216,6 +216,13 @@ p span {
     height: auto; /* Maintains aspect ratio */
   }
 
+  .flag {
+    width: 30px;
+    height: auto;
+    margin-left: 10px; /* Adjusts spacing between text and flag */
+    vertical-align: middle; /* Aligns flag vertically with the text */
+}
+
   @media (max-width: 639px) {
     /* General adjustments */
     body {
