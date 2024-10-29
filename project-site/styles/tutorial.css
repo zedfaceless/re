@@ -188,6 +188,15 @@ footer {
     color: #fff;
 }
 
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+  
 
   .flag {
     width: 30px;

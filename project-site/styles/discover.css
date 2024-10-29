@@ -157,6 +157,16 @@ button:hover {
     align-items: flex-start; /* Align items to the top */
 }
 
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+  
+
 .flag {
     width: 30px;
     height: auto;

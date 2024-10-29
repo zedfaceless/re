@@ -123,6 +123,16 @@ nav ul li a.active::after {
     color: #007bff; /* Change color on hover */
 }
 
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+  
+
 footer {
     background-color: lightblue;
     color: black;
