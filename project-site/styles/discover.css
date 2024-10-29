@@ -220,3 +220,83 @@ p span {
     max-width: 30%; /* Ensures the logo is responsive */
     height: auto; /* Maintains aspect ratio */
   }
+/* Mobile View Styling */
+@media (max-width: 639px) {
+  /* Body */
+  body {
+    font-size: 14px; /* Slightly smaller font for compact screens */
+  }
+  
+  /* Header */
+  header {
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start; /* Stacks elements vertically */
+  }
+  
+  .logo {
+    width: 100px; /* Smaller logo */
+    margin-right: 0;
+  }
+  
+  /* Navigation */
+  nav ul {
+    display: none; /* Hides the full navigation for smaller screens */
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .hamburger {
+    display: block; /* Show hamburger icon */
+    font-size: 24px;
+  }
+  
+  /* Responsive Nav List */
+  #nav-list.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* Discover Section */
+  .discover-container {
+    padding: 10px;
+    max-width: 100%;
+  }
+  
+  /* Resources */
+  .resources {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  /* Footer */
+  footer {
+    flex-direction: column; /* Stack footer items */
+    padding: 15px;
+  }
+  
+  .container {
+    flex-direction: column; /* Stack columns */
+    align-items: flex-start;
+  }
+  
+  .footer-content, .footer-links, .quick-guides {
+    margin: 5px 0; /* Space between stacked columns */
+  }
+  
+  .footer-logo img {
+    max-width: 50%; /* Resize logo in footer */
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
+
+
+

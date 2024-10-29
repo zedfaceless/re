@@ -509,32 +509,111 @@ p span {
 
 
     /* Responsive adjustments */
-    @media (max-width: 768px)   {
+    @media (max-width: 639px) {
+  
+      /* Navigation */
+      .hamburger {
+        display: block; /* Display hamburger icon */
+        font-size: 24px;
+        color: black;
+        cursor: pointer;
+      }
     
-    .hamburger {
-      display: block;
+      nav ul {
+        display: none; /* Hide the navigation menu */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 100%; /* Below header */
+        right: 0;
+        background-color: var(--nav-background-color);
+        width: 100%; /* Full width for mobile view */
+        text-align: center;
+      }
+    
+      nav ul.show {
+        display: flex; /* Show nav links when hamburger is active */
+      }
+    
+      nav ul li {
+        width: 100%;
+        padding: 10px 0;
+      }
+    
+      /* Header */
+      header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+      }
+    
+      .logo {
+        width: 120px; /* Adjust logo size */
+      }
+    
+      /* Hero Section */
+      .hero {
+        height: auto; /* Auto height for better fit */
+        padding: 20px;
+        background-size: cover;
+      }
+    
+      .hero-text h1 {
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 10px 0;
+      }
+    
+      .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        margin: 15px 0;
+      }
+    
+      /* Events and Weather Sections */
+      .weather-events {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+      }
+    
+      .events, .weather {
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+      }
+    
+      /* Spotlights */
+      #spotlight-container {
+        grid-template-columns: 1fr; /* Single-column layout */
+      }
+    
+      /* Inspirations */
+      .inspiration-container {
+        flex-direction: column; /* Stack items vertically */
+      }
+    
+      .inspiration-item {
+        width: 100%; /* Full width on mobile */
+      }
+    
+      .inspiration-item img {
+        height: 200px; /* Adjusted height */
+      }
+    
+      /* Footer */
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+      }
+    
+      .footer-content, .footer-links, .quick-guides {
+        margin: 10px 0;
+        width: 100%;
+      }
+    
+      .footer-logo img {
+        max-width: 50%; /* Adjusted size */
+      }
     }
-  
-    nav ul {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background-color: #333;
-      width: 100%;
-      text-align: center;
-    }
-  
-    nav ul.show {
-      display: flex;
-    }
-  
-    nav ul li {
-      width: 100%;
-    }
-  
-    .events-weather {
-      flex-direction: column; /* Stack the sections on smaller screens */
-    }
-  }
+    

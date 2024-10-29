@@ -229,3 +229,96 @@ p span {
     max-width: 30%; /* Ensures the logo is responsive */
     height: auto; /* Maintains aspect ratio */
   }
+
+  /* Mobile View Styling */
+@media (max-width: 639px) {
+  /* Body and General */
+  body {
+    font-size: 14px; /* Reduced font size for readability on small screens */
+  }
+  
+  /* Header */
+  header {
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start; /* Stack header content vertically */
+  }
+  
+  .logo {
+    width: 100px; /* Smaller logo */
+    margin-bottom: 10px;
+  }
+
+  /* Hamburger Menu */
+  .hamburger {
+    display: block; /* Show hamburger icon */
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+  }
+  
+  nav ul {
+    display: none; /* Hide full navigation for mobile */
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #nav-list.active {
+    display: flex; /* Display nav when menu is active */
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* FAQ Container */
+  .faq-container {
+    padding: 10px; /* Add padding for mobile */
+    margin: 0;
+  }
+  
+  .faq-item {
+    margin: 10px 0; /* Reduced margin for compact view */
+    padding: 10px; /* Add padding for touch-friendly design */
+  }
+  
+  .faq-question {
+    font-size: 1.1em; /* Adjust font size for small screens */
+  }
+  
+  .faq-answer {
+    font-size: 0.9em; /* Reduced font size for answers */
+  }
+
+  /* Footer */
+  footer {
+    flex-direction: column; /* Stack footer columns vertically */
+    text-align: center;
+    padding: 15px;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 100%; /* Full-width for mobile */
+    margin: 0;
+  }
+  
+  .footer-content, .footer-links, .quick-guides {
+    margin: 10px 0; /* Space between stacked sections */
+    text-align: center;
+  }
+
+  .footer-links ul, .quick-guides ul {
+    padding: 0;
+  }
+
+  .footer-logo img {
+    max-width: 80px; /* Reduce logo size in footer */
+    height: auto;
+  }
+
+  /* Social Icons */
+  .social-icons {
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+}

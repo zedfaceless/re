@@ -278,3 +278,118 @@ p span {
     max-width: 30%; /* Ensures the logo is responsive */
     height: auto; /* Maintains aspect ratio */
   }
+
+  @media (max-width: 639px) {
+  
+    /* Body */
+    body {
+      font-family: 'Roboto', sans-serif; /* Use Roboto font for mobile */
+      line-height: 1.6; /* Adjust line height for readability */
+    }
+  
+    /* Header */
+    header {
+      flex-direction: column; /* Stack items vertically */
+      padding: 10px; /* Reduced padding */
+      text-align: center; /* Center text */
+    }
+  
+    .header-container {
+      flex-direction: column; /* Stack elements */
+      padding: 5px; /* Reduced padding */
+    }
+  
+    .logo {
+      width: 120px; /* Adjust logo size for mobile */
+      margin-bottom: 10px; /* Space below logo */
+    }
+  
+    /* Navigation */
+    .hamburger {
+      display: block; /* Show hamburger icon */
+      font-size: 24px;
+      color: black;
+      cursor: pointer;
+    }
+  
+    nav ul {
+      display: none; /* Hide navigation by default */
+      flex-direction: column; /* Stack links vertically */
+      position: absolute;
+      top: 100%; /* Position menu below header */
+      right: 0;
+      background-color: lightblue; /* Background color */
+      width: 100%; /* Full width */
+      text-align: center; /* Center links */
+      padding: 10px 0; /* Padding for menu */
+    }
+  
+    nav ul.show {
+      display: flex; /* Show links when active */
+    }
+  
+    nav ul li {
+      width: 100%; /* Full width for menu items */
+      padding: 10px 0; /* Padding for menu items */
+    }
+  
+    nav a {
+      font-size: 1rem; /* Adjust font size for mobile */
+      color: black; /* Change text color */
+    }
+  
+    /* Video Gallery */
+    .video-gallery {
+      margin: 15px; /* Reduced margin */
+    }
+  
+    .video-item {
+      width: 100%; /* Full width */
+      max-width: 100%; /* No max width for mobile */
+      margin: 10px 0; /* Space between items */
+      padding: 5px; /* Reduced padding */
+    }
+  
+    .video-item iframe {
+      height: 250px; /* Adjust height for mobile */
+    }
+  
+    .video-caption {
+      font-size: 1em; /* Smaller font size for captions */
+      margin: 10px 0; /* Reduced margin */
+      margin-left: 0; /* Remove left margin */
+      text-align: center; /* Center captions */
+    }
+  
+    .extra-tips {
+      padding: 5px; /* Reduced padding for tips */
+      font-size: 0.8em; /* Smaller font size */
+    }
+  
+    /* Button */
+    button {
+      padding: 8px 12px; /* Smaller padding */
+    }
+  
+    /* Footer */
+    footer {
+      flex-direction: column; /* Stack items */
+      padding: 10px; /* Reduced padding */
+    }
+  
+    .container {
+      flex-direction: column; /* Stack columns */
+      width: 100%; /* Full width */
+      align-items: center; /* Center content */
+    }
+  
+    .footer-content, .footer-links, .quick-guides {
+      width: 100%; /* Full width for columns */
+      margin: 10px 0; /* Margin for spacing */
+    }
+  
+    .footer-logo img {
+      max-width: 50%; /* Adjust logo size */
+    }
+  }
+  
